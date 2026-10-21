@@ -1889,7 +1889,9 @@
     #livecal .lc-ttl{flex:1;display:flex;flex-direction:column;justify-content:center;padding:8px 16px;border:3px solid;border-left:none;border-radius:0 8px 8px 0;font-family:'Bitter',Georgia,serif;font-weight:700;font-size:16px;color:var(--navy);}
     #livecal .lc-ttl span{font-weight:400;font-size:13.5px;}
     #livecal .lc-days{display:flex;flex-wrap:wrap;gap:12px;}
-    #livecal .lc-day{flex:0 0 118px;border-radius:10px;border:3px solid;background:#fff;text-align:center;padding:9px 6px 8px;}
+    #livecal .lc-day{flex:0 0 118px;border-radius:10px;border:3px solid;background:#fff;text-align:center;padding:9px 6px 8px;position:relative;}
+    #livecal .lc-lbl{display:inline-block;margin:-20px auto 4px;color:#fff;font-family:'Bitter',Georgia,serif;font-weight:800;font-size:10px;letter-spacing:.06em;border-radius:999px;padding:2px 9px;}
+    #livecal .lc-days{padding-top:6px;}
     #livecal .lc-dow{font-family:'Bitter',Georgia,serif;font-weight:800;font-size:15px;text-transform:uppercase;}
     #livecal .lc-date{font-family:'Bitter',Georgia,serif;font-weight:800;font-size:26px;color:var(--navy);line-height:1.15;}
     #livecal .lc-mo{font-family:'Lato',sans-serif;font-weight:700;font-size:11px;letter-spacing:.08em;color:#7a6a48;text-transform:uppercase;}
@@ -1918,18 +1920,18 @@
     <script>(function(){
     /* EDIT THE SCHEDULE HERE — one block per program; dates are YYYY-MM-DD. Past days hide themselves. */
     var SCHEDULE=[
-      {tag:"HEALTH<br><small>CRAM</small>",title:"FLORIDA | 2-40 Health Insurance",sub:"THREE (3) Day State Exam Cram",color:"orange",days:["2026-10-26","2026-10-27","2026-10-29"]},
-      {tag:"iLAW<br><small>BONUS</small>",title:"iLaw | LIVE Instructor Led FAST Start",sub:"NEW Student Orientation",color:"green",days:["2026-11-03"]},
-      {tag:"2-15<br><small>CRAM</small>",title:"FLORIDA | 2-15 Health &amp; Life Insurance",sub:"( Including Annuities &amp; Variable Contracts )",color:"blue",days:["2026-11-05","2026-11-09","2026-11-10","2026-11-12","2026-11-13"]}
+      {tag:"HEALTH<br><small>CRAM</small>",title:"FLORIDA | 2-40 Health Insurance",sub:"THREE (3) Day State Exam Cram",color:"orange",days:[{d:"2026-10-26"},{d:"2026-10-27"},{d:"2026-10-29"}]},
+      {tag:"iLAW<br><small>BONUS</small>",title:"iLaw | LIVE Instructor Led FAST Start",sub:"NEW Student Orientation",color:"green",days:[{d:"2026-11-03"},{d:"2026-11-05",label:"BACKUP DAY"}],sum:false},
+      {tag:"2-15<br><small>CRAM</small>",title:"FLORIDA | 2-15 Health &amp; Life Insurance",sub:"( Including Annuities &amp; Variable Contracts )",color:"blue",days:[{d:"2026-11-09",label:"HEALTH",color:"orange"},{d:"2026-11-10",label:"HEALTH",color:"orange"},{d:"2026-11-12",label:"LIFE",color:"blue"},{d:"2026-11-13",label:"LIFE",color:"blue"}],sumText:'2 Days <span class="t-orange">HEALTH</span> + 2 Days <span class="t-blue">LIFE</span> = <b>SUCCESS</b>'}
     ];
     var DOW=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],MO=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
     var el=document.getElementById("lcList");if(!el)return;var today=new Date();today.setHours(0,0,0,0);
     function gcal(t,d,details){var a=d.replace(/-/g,""),x=new Date(d+"T12:00:00");x.setDate(x.getDate()+1);var b=x.getFullYear()+String(x.getMonth()+1).padStart(2,"0")+String(x.getDate()).padStart(2,"0");return "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent(t)+"&dates="+a+"/"+b+"&details="+encodeURIComponent(details)+"&location="+encodeURIComponent("The Insurance School - Live Instructor Led");}
-    SCHEDULE.forEach(function(p){var days=p.days.filter(function(d){return new Date(d+"T12:00:00")>=today;});if(!days.length)return;
+    SCHEDULE.forEach(function(p){var days=p.days.filter(function(o){return new Date(o.d+"T12:00:00")>=today;});if(!days.length)return;
       var plain=p.title.replace(/&amp;/g,"&")+" — "+p.sub.replace(/&amp;/g,"&");
       var h='<div class="lc-blk"><div class="lc-top"><div class="lc-tag c-'+p.color+'">'+p.tag+'</div><div class="lc-ttl b-'+p.color+'">'+p.title+'<span>'+p.sub+'</span></div></div><div class="lc-days">';
-      days.forEach(function(d,i){var x=new Date(d+"T12:00:00");h+='<div class="lc-day b-'+p.color+'"><div class="lc-dow t-'+p.color+'">'+DOW[x.getDay()]+'</div><div class="lc-date">'+x.getDate()+'</div><div class="lc-mo">'+MO[x.getMonth()]+' '+x.getFullYear()+'</div><a class="lc-add" target="_blank" rel="noopener" href="'+gcal(plain+(days.length>1?" (Day "+(i+1)+")":""),d,"TheInsuranceSchool.com — 407.332.6645")+'">+ Add to Google Calendar</a></div>';});
-      h+='</div>';if(days.length>1){h+='<div class="lc-sum">'+days.map(function(d){return DOW[new Date(d+"T12:00:00").getDay()];}).join(" + ")+' = <b>SUCCESS</b></div>';}
+      days.forEach(function(o,i){var c=o.color||p.color,x=new Date(o.d+"T12:00:00");h+='<div class="lc-day b-'+c+'">'+(o.label?'<div class="lc-lbl c-'+c+'">'+o.label+'</div>':'')+'<div class="lc-dow t-'+c+'">'+DOW[x.getDay()]+'</div><div class="lc-date">'+x.getDate()+'</div><div class="lc-mo">'+MO[x.getMonth()]+' '+x.getFullYear()+'</div><a class="lc-add" target="_blank" rel="noopener" href="'+gcal(plain+(o.label?" — "+o.label:"")+(days.length>1&&p.sum!==false?" (Day "+(i+1)+")":""),o.d,"TheInsuranceSchool.com — 407.332.6645")+'">+ Add to Google Calendar</a></div>';});
+      h+='</div>';if(p.sumText){h+='<div class="lc-sum">'+p.sumText+'</div>';}else if(days.length>1&&p.sum!==false){h+='<div class="lc-sum">'+days.map(function(o){return DOW[new Date(o.d+"T12:00:00").getDay()];}).join(" + ")+' = <b>SUCCESS</b></div>';}
       el.insertAdjacentHTML("beforeend",h+'</div>');});
     })();</script>
 </section>
