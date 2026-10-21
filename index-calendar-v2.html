@@ -2236,14 +2236,14 @@
       var cur=0,strip=document.getElementById("calstrip"),rail=document.getElementById("calrail");if(!strip)return;
       function ab(dt){return MO[dt.getMonth()].slice(0,3).toUpperCase();}
       function drawRail(){var dt=months[cur],y=dt.getFullYear(),m=dt.getMonth(),h='';
-        SCHEDULE.forEach(function(p){var ds=p.days.filter(function(o){var x=new Date(o.d+"T12:00:00");return x.getFullYear()===y&&x.getMonth()===m&&x>=now;});if(!ds.length)return;
+        var mstart=new Date(y,m,1),lastMo=-1;SCHEDULE.forEach(function(p){var ds=p.days.filter(function(o){var x=new Date(o.d+"T12:00:00");return x>=mstart&&x>=now;});if(!ds.length)return;var fm=new Date(ds[0].d+"T12:00:00");var mk=fm.getFullYear()*12+fm.getMonth();if(mk!==lastMo){if(lastMo!==-1||mk!==y*12+m){h+='<div class="lc-molbl" style="font-family:Bitter,Georgia,serif;font-weight:800;font-size:15px;letter-spacing:.12em;color:var(--navy);margin:6px 0 10px 4px;">'+MO[fm.getMonth()].toUpperCase()+' '+fm.getFullYear()+'</div>';}lastMo=mk;}
           h+='<div class="lc-blk"><div class="lc-top"><div class="lc-tag c-'+p.color+'">'+p.tag+'</div><div class="lc-ttl b-'+p.color+'">'+p.title+'<span>'+p.sub+'</span></div></div><div class="lc-days">';
           ds.forEach(function(o){var c=o.color||p.color,x=new Date(o.d+"T12:00:00");h+='<div class="lc-day b-'+c+'">'+(o.label?'<div class="lc-lbl c-'+c+'">'+o.label+'</div>':'')+'<div class="lc-dow t-'+c+'">'+DOW[x.getDay()]+'</div><div class="lc-date">'+x.getDate()+'</div><div class="lc-mo">'+MO[x.getMonth()].slice(0,3)+' '+x.getFullYear()+'</div><a class="lc-add" target="_blank" rel="noopener" href="'+gcal(plain({p:p,o:o}),o.d)+'">+ Add to Google Calendar</a></div>';});
           h+='</div></div>';});
         rail.innerHTML=h||'<div class="lc-empty">'+MO[m]+' LIVE dates are coming soon.</div>';rail.scrollTop=0;}
       function render(){strip.innerHTML='';for(var off=-1;off<=1;off++){var i=cur+off;if(i<0||i>=months.length){var sp=document.createElement("div");sp.style.width="150px";sp.style.flex="0 0 auto";strip.appendChild(sp);continue;}
           var d=document.createElement("div");d.className="thumb"+(off===0?" focus":"");d.innerHTML=month(months[i],false);(function(idx){d.onclick=function(){if(idx===cur)calOpen();else{cur=idx;render();}};})(i);strip.appendChild(d);}
-        document.getElementById("calcur").textContent=ab(months[cur]);document.getElementById("calfirst").textContent=ab(months[0]);document.getElementById("callast").textContent=ab(months[months.length-1]);drawRail();}
+        var sc=document.querySelector("#calstage .scale");if(sc){sc.innerHTML=months.map(function(mo,k){return '<span class="'+(k===cur?"pcur":"pend")+'" style="cursor:pointer;min-width:44px;" onclick="calStep('+(k-cur)+')">'+ab(mo)+'</span>';}).join('<span class="ptrk"></span>');}drawRail();}
       window.calOpen=function(){document.getElementById("calbig").innerHTML=month(months[cur],true);document.getElementById("calbox").classList.add("open");};
       window.calClose=function(){document.getElementById("calbox").classList.remove("open");};
       window.calStep=function(n,inBox){cur=Math.max(0,Math.min(months.length-1,cur+n));render();if(inBox)calOpen();};
