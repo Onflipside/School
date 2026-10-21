@@ -1874,7 +1874,65 @@
   centerMarks();
 
   </script><div id="lightbox" onclick="closeLB()"><button id="lbclose" onclick="closeLB()" aria-label="Close">&times;</button><button id="lbprev" onclick="event.stopPropagation();lbStep(-1)" aria-label="Previous">&#8249;</button><button id="lbnext" onclick="event.stopPropagation();lbStep(1)" aria-label="Next">&#8250;</button><img id="lbimg" alt="page" onclick="event.stopPropagation()"></div>
-  </section>
+  
+    <!-- ===== LIVE INSTRUCTORS MATTER + LIVE INSTRUCTOR SCHEDULE ===== -->
+    <style>
+    #livecal{margin:56px 0 10px;}
+    #livecal .lc-panelwrap{display:flex;justify-content:center;margin-bottom:26px;}
+    #livecal .lc-h{display:flex;align-items:center;gap:14px;margin:0 0 18px;font-family:'Bitter',Georgia,serif;font-weight:800;font-size:20px;color:var(--navy);}
+    #livecal .lc-h .g{color:var(--gold);}
+    #livecal .lc-h .ln{flex:1;height:3px;background:var(--gold);border-radius:2px;}
+    #livecal .lc-blk{background:var(--cream-card);border:1px solid #e6dcc2;border-radius:16px;padding:18px 20px 20px;margin-bottom:22px;box-shadow:0 4px 14px rgba(24,40,83,.08);}
+    #livecal .lc-top{display:flex;align-items:stretch;gap:0;margin-bottom:14px;}
+    #livecal .lc-tag{flex:0 0 auto;display:flex;flex-direction:column;justify-content:center;align-items:center;padding:8px 16px;font-family:'Bitter',Georgia,serif;font-weight:800;font-size:15px;line-height:1.1;color:#fff;border-radius:8px 0 0 8px;text-transform:uppercase;text-align:center;}
+    #livecal .lc-tag small{font-size:19px;}
+    #livecal .lc-ttl{flex:1;display:flex;flex-direction:column;justify-content:center;padding:8px 16px;border:3px solid;border-left:none;border-radius:0 8px 8px 0;font-family:'Bitter',Georgia,serif;font-weight:700;font-size:16px;color:var(--navy);}
+    #livecal .lc-ttl span{font-weight:400;font-size:13.5px;}
+    #livecal .lc-days{display:flex;flex-wrap:wrap;gap:12px;}
+    #livecal .lc-day{flex:0 0 118px;border-radius:10px;border:3px solid;background:#fff;text-align:center;padding:9px 6px 8px;}
+    #livecal .lc-dow{font-family:'Bitter',Georgia,serif;font-weight:800;font-size:15px;text-transform:uppercase;}
+    #livecal .lc-date{font-family:'Bitter',Georgia,serif;font-weight:800;font-size:26px;color:var(--navy);line-height:1.15;}
+    #livecal .lc-mo{font-family:'Lato',sans-serif;font-weight:700;font-size:11px;letter-spacing:.08em;color:#7a6a48;text-transform:uppercase;}
+    #livecal .lc-add{display:inline-block;margin-top:7px;font-family:'Lato',sans-serif;font-weight:700;font-size:10.5px;color:var(--dfs-accent);text-decoration:none;border-top:1px solid #e6dcc2;padding-top:6px;width:100%;}
+    #livecal .lc-add:hover{text-decoration:underline;}
+    #livecal .lc-sum{margin-top:12px;font-family:'Bitter',Georgia,serif;font-weight:700;font-size:15px;color:var(--green);}
+    #livecal .lc-sum b{color:var(--navy);}
+    #livecal .c-orange{background:var(--orange);} #livecal .b-orange{border-color:var(--orange);} #livecal .t-orange{color:var(--orange);}
+    #livecal .c-blue{background:var(--blue);} #livecal .b-blue{border-color:var(--blue);} #livecal .t-blue{color:var(--blue);}
+    #livecal .c-green{background:var(--green);} #livecal .b-green{border-color:var(--green);} #livecal .t-green{color:var(--green);}
+    </style>
+    <section id="livecal">
+      <div class="lc-panelwrap">
+        <section class="panel" style="padding:20px;width:fit-content;margin:0;">
+          <div style="text-align:left;">
+            <div class="titlebox" style="text-align:center;margin-bottom:0;">
+              <h3 style="font-size:28px;">Live Instructors <span class="display" style="font-style:italic;color:var(--gold-bright);">Matter</span></h3>
+              <div class="sub" style="font-family:'Bitter',Georgia,serif;font-style:normal;font-weight:700;color:#fff;font-size:17px;">You Read&ensp;<span style="color:var(--gold-bright);">|</span>&ensp;<span class="display" style="font-style:italic;color:var(--gold-bright);">Our Instructors Reinforce</span></div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="lc-h"><span>LIVE Instructor <span class="g">|</span> Schedule</span><span class="ln"></span></div>
+      <div id="lcList"></div>
+    </section>
+    <script>(function(){
+    /* EDIT THE SCHEDULE HERE — one block per program; dates are YYYY-MM-DD. Past days hide themselves. */
+    var SCHEDULE=[
+      {tag:"HEALTH<br><small>CRAM</small>",title:"FLORIDA | 2-40 Health Insurance",sub:"THREE (3) Day State Exam Cram",color:"orange",days:["2026-10-26","2026-10-27","2026-10-29"]},
+      {tag:"iLAW<br><small>BONUS</small>",title:"iLaw | LIVE Instructor Led FAST Start",sub:"NEW Student Orientation",color:"green",days:["2026-11-03"]},
+      {tag:"2-15<br><small>CRAM</small>",title:"FLORIDA | 2-15 Health &amp; Life Insurance",sub:"( Including Annuities &amp; Variable Contracts )",color:"blue",days:["2026-11-05","2026-11-09","2026-11-10","2026-11-12","2026-11-13"]}
+    ];
+    var DOW=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],MO=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+    var el=document.getElementById("lcList");if(!el)return;var today=new Date();today.setHours(0,0,0,0);
+    function gcal(t,d,details){var a=d.replace(/-/g,""),x=new Date(d+"T12:00:00");x.setDate(x.getDate()+1);var b=x.getFullYear()+String(x.getMonth()+1).padStart(2,"0")+String(x.getDate()).padStart(2,"0");return "https://calendar.google.com/calendar/render?action=TEMPLATE&text="+encodeURIComponent(t)+"&dates="+a+"/"+b+"&details="+encodeURIComponent(details)+"&location="+encodeURIComponent("The Insurance School - Live Instructor Led");}
+    SCHEDULE.forEach(function(p){var days=p.days.filter(function(d){return new Date(d+"T12:00:00")>=today;});if(!days.length)return;
+      var plain=p.title.replace(/&amp;/g,"&")+" — "+p.sub.replace(/&amp;/g,"&");
+      var h='<div class="lc-blk"><div class="lc-top"><div class="lc-tag c-'+p.color+'">'+p.tag+'</div><div class="lc-ttl b-'+p.color+'">'+p.title+'<span>'+p.sub+'</span></div></div><div class="lc-days">';
+      days.forEach(function(d,i){var x=new Date(d+"T12:00:00");h+='<div class="lc-day b-'+p.color+'"><div class="lc-dow t-'+p.color+'">'+DOW[x.getDay()]+'</div><div class="lc-date">'+x.getDate()+'</div><div class="lc-mo">'+MO[x.getMonth()]+' '+x.getFullYear()+'</div><a class="lc-add" target="_blank" rel="noopener" href="'+gcal(plain+(days.length>1?" (Day "+(i+1)+")":""),d,"TheInsuranceSchool.com — 407.332.6645")+'">+ Add to Google Calendar</a></div>';});
+      h+='</div>';if(days.length>1){h+='<div class="lc-sum">'+days.map(function(d){return DOW[new Date(d+"T12:00:00").getDay()];}).join(" + ")+' = <b>SUCCESS</b></div>';}
+      el.insertAdjacentHTML("beforeend",h+'</div>');});
+    })();</script>
+</section>
   
   
 
