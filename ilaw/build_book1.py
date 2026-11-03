@@ -14,7 +14,7 @@ def one(pat, rep, flags=re.S):
     if n != 1: sys.exit('MISSING: ' + pat[:70])
 
 # ---- pages, in page-number order
-files = sorted(glob.glob(ROOT + '/ilaw/book1/p*.png'), key=lambda f: int(re.search(r'p(\d+)\.png', f).group(1)))
+files = sorted(glob.glob(ROOT + '/ilaw/book1/p*.png'), key=lambda f: {22:23.5}.get(int(re.search(r'p(\d+)\.png', f).group(1)), int(re.search(r'p(\d+)\.png', f).group(1))))
 pages = []
 for f in files:
     n = int(re.search(r'p(\d+)\.png', f).group(1))
@@ -25,7 +25,7 @@ nums = [n for n, _ in pages]
 one(r'var PAGES=\[.*?\];', 'var PAGES=[\n' + ''.join('    {n:%d,img:"%s"},\n' % p for p in pages) + '  ];')
 one(r'var cur=1;', 'var cur=0;')
 one(r"document.getElementById\('pcur'\).textContent=\(cur\+1\);", "document.getElementById('pcur').textContent=PAGES[cur].n;")
-one(r"document.getElementById\('plast'\).textContent=PAGES.length;", "document.getElementById('plast').textContent=PAGES[PAGES.length-1].n;document.getElementById('pfirst').textContent=PAGES[0].n;")
+one(r"document.getElementById\('plast'\).textContent=PAGES.length;", "document.getElementById('plast').textContent=Math.max.apply(null,PAGES.map(function(p){return p.n;}));document.getElementById('pfirst').textContent=PAGES[0].n;")
 one(r'<span class="pend">1</span>', '<span class="pend" id="pfirst">%d</span>' % nums[0])
 one(r'<span class="pcur" id="pcur">1</span>', '<span class="pcur" id="pcur">%d</span>' % nums[0])
 one(r'<span class="pend" id="plast">14</span>', '<span class="pend" id="plast">%d</span>' % nums[-1])
