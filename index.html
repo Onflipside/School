@@ -1998,8 +1998,11 @@
     /* EDIT THE SCHEDULE HERE — one block per program; dates are YYYY-MM-DD. Past days hide themselves. */
     var SCHEDULE=[
       {tag:"HEALTH<br><small>CRAM</small>",title:"FLORIDA | 2-40 Health Insurance",sub:"THREE (3) Day State Exam Cram",color:"orange",days:[{d:"2026-10-26"},{d:"2026-10-27"},{d:"2026-10-29"}]},
-      {tag:"iLaw<br><small>INSURANCE<br>LAW</small>",title:"iLaw | LIVE Instructor Led FAST Start",sub:"NEW Student Orientation",color:"green",days:[{d:"2026-11-03"},{d:"2026-11-05",label:"BACKUP DAY"}],sum:false},
-      {tag:"2-15<br><small>CRAM</small>",title:"FLORIDA | 2-15 Health &amp; Life Insurance",sub:"( Including Annuities &amp; Variable Contracts )",color:"blue",days:[{d:"2026-11-09",label:"HEALTH",color:"orange"},{d:"2026-11-10",label:"HEALTH",color:"orange"},{d:"2026-11-12",label:"LIFE",color:"blue"},{d:"2026-11-13",label:"LIFE",color:"blue"}],sumText:'2 Days <span class="t-orange">HEALTH</span> + 2 Days <span class="t-blue">LIFE</span> = <b>SUCCESS</b>'}
+      {tag:"iLaw<br><small>INSURANCE<br>LAW</small>",title:"iLaw | LIVE Instructor Led FAST Start",sub:"NEW Student Orientation",color:"green",days:[{d:"2026-11-05",label:"iLaw | State"}],sum:false},
+      {tag:"2-15<br><small>CRAM</small>",title:"FLORIDA | 2-15 Health &amp; Life Insurance",sub:"( Including Annuities &amp; Variable Contracts )",color:"blue",days:[{d:"2026-11-09",label:"HEALTH",color:"orange"},{d:"2026-11-10",label:"HEALTH",color:"orange"},{d:"2026-11-12",label:"iLaw | Sales",color:"green"},{d:"2026-11-13",label:"HEALTH",color:"orange"},{d:"2026-11-16",label:"LIFE",color:"blue"},{d:"2026-11-17",label:"ANNUITY",color:"blue"},{d:"2026-11-19",label:"LIFE",color:"blue"}],sumText:'3 Days <span class="t-orange">HEALTH</span> + <span class="t-green">iLaw</span> + 3 Days <span class="t-blue">LIFE</span> = <b>SUCCESS</b>'},
+      {tag:"iLaw<br><small>INSURANCE<br>LAW</small>",title:"iLaw | LIVE Instructor Led FAST Start",sub:"NEW Student Orientation",color:"green",days:[{d:"2026-12-03",label:"iLaw | State"}],sum:false},
+      {tag:"HEALTH<br><small>LIVE</small>",title:"FLORIDA | 2-40 Health Insurance",sub:"LIVE Instructor Days",color:"orange",days:[{d:"2026-12-07"},{d:"2026-12-08"},{d:"2026-12-10"},{d:"2026-12-11"}]},
+      {tag:"LIFE<br><small>LIVE</small>",title:"FLORIDA | 2-14 Life &amp; Annuities",sub:"LIVE Instructor Days",color:"blue",days:[{d:"2026-12-14"},{d:"2026-12-15"},{d:"2026-12-17"},{d:"2026-12-18"}]}
     ];
     var DOW=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],MO=["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
     var el=document.getElementById("lcList");if(!el)return;var today=new Date();today.setHours(0,0,0,0);
