@@ -14,7 +14,7 @@ def one(pat, rep, flags=re.S):
     if n != 1: sys.exit('MISSING: ' + pat[:70])
 
 # ---- pages, in page-number order
-files = sorted(glob.glob(ROOT + '/ilaw/book1/p*.png'), key=lambda f: {22:23.5}.get(int(re.search(r'p(\d+)\.png', f).group(1)), int(re.search(r'p(\d+)\.png', f).group(1))))
+files = sorted(glob.glob(ROOT + '/ilaw/book1/p*.png'), key=lambda f: {}.get(int(re.search(r'p(\d+)\.png', f).group(1)), int(re.search(r'p(\d+)\.png', f).group(1))))
 pages = []
 for f in files:
     n = int(re.search(r'p(\d+)\.png', f).group(1))
