@@ -132,7 +132,7 @@ LOCATOR = [
   ('ORGANIZED FRAUD', [26]),
   ('Part-III | Insurance Policy Application', [12, 13]),
   ('PBM | Pharmacy Benefit Managers', [36]),
-  ('PERIL', [15]),
+  ('PERIL', [15, 16]),
   ('Personal Worksheet', [33, 34]),
   ('PHYSICAL Hazards', [14]),
   ('PRESUMPTIVE Disabilities', [14]),
