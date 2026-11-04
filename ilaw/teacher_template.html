@@ -50,6 +50,11 @@ a.pg:hover,.lp a:hover{background:var(--gb);color:#fff}
 .lp{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}
 .find{width:100%;padding:8px 12px;border:2px solid #d8cba7;border-radius:8px;font-size:14px;margin:10px 0}
 .full{grid-column:1/-1}
+.qbox .qt{flex:1}
+.qbox a.pg{align-self:center}
+.vflag{flex:0 0 auto;align-self:center;background:var(--purple);color:#fff;font-family:'Lato';font-weight:900;font-size:10px;letter-spacing:1px;border-radius:999px;padding:2px 8px}
+.qa.hit .qbox{background:#FFF3C4;box-shadow:0 0 0 3px var(--pill)}
+.nohit{font-size:12.5px;color:#9a8f73;padding:4px 0 0}
 @media(max-width:900px){.wrap{grid-template-columns:1fr}.viewer{position:static}.lgrid{grid-template-columns:1fr}}
 @media print{header,.bar,.viewer{display:none}.scroll{max-height:none}.ans{display:block}}
 </style></head>
@@ -69,7 +74,7 @@ a.pg:hover,.lp a:hover{background:var(--gb);color:#fff}
   </div>
   <div>
     <div class="panel">
-      <div class="ph"><h2>Survival Guide | KEY</h2><span class="cnt">%%NQ%% Questions</span><button onclick="document.body.classList.toggle('showall')">Show / hide all answers</button></div>
+      <div class="ph"><h2>Survival Guide | KEY</h2><span class="cnt">%%NQ%% Questions · %%NV%% Vocab</span><button onclick="document.body.classList.toggle('showall')">Show / hide all answers</button></div>
       <div class="scroll" id="sg">%%SG%%</div>
     </div>
   </div>
@@ -89,8 +94,12 @@ function show(){var p=P[cur];document.getElementById('pg').src=BASE+p+'.png';doc
 function step(n){cur=Math.max(0,Math.min(P.length-1,cur+n));show();}
 function go(v){var s=String(v).toLowerCase().replace(/^0+/,'');var i=P.findIndex(function(p){return p.replace(/^0+/,'')===s;});if(i>=0){cur=i;show();}}
 document.addEventListener('keydown',function(e){if(e.target.tagName==='INPUT')return;if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1);});
-document.querySelectorAll('.ckrow').forEach(function(r){r.onclick=function(){r.classList.toggle('done');document.getElementById('ckd').textContent=document.querySelectorAll('.ckrow.done').length;go(r.dataset.pg);};});
+function mark(n){document.querySelectorAll('.qa.hit').forEach(function(e){e.classList.remove('hit');});var e=document.getElementById('q'+n);if(!e)return;e.classList.add('hit');var s=document.getElementById('sg');s.scrollTop=e.offsetTop-s.offsetTop-10;}
+function openQ(n){var e=document.getElementById('q'+n);e.classList.toggle('open');go(e.dataset.pg);mark(n);history.replaceState(null,'','#q'+n);}
+function hit(p){go(p);var e=document.querySelector('.qa[data-pg="'+p+'"]');if(e){mark(e.id.slice(1));}else{document.querySelectorAll('.qa.hit').forEach(function(x){x.classList.remove('hit');});}}
+document.querySelectorAll('.ckrow').forEach(function(r){r.onclick=function(){r.classList.toggle('done');document.getElementById('ckd').textContent=document.querySelectorAll('.ckrow.done').length;hit(parseInt(r.dataset.pg));};});
 function filt(t){t=t.toLowerCase();document.querySelectorAll('.lrow').forEach(function(r){r.style.display=r.textContent.toLowerCase().indexOf(t)>=0?'':'none';});}
 show();
+if(/^#q\d+$/.test(location.hash)){var n=location.hash.slice(2);var e=document.getElementById('q'+n);if(e){e.classList.add('open');go(e.dataset.pg);mark(n);}}
 </script>
 </body></html>

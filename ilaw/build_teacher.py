@@ -3,6 +3,7 @@
 import json, re, html, sys
 sys.path.insert(0, '/home/claude/School/ilaw')
 from master_toc import UNITS, OFFSET
+from sg_pages import MAP, V
 
 qs = json.load(open('/tmp/claude-0/sg/sg.json'))
 def clean_sec(s):
@@ -52,18 +53,20 @@ last = None
 for q in qs:
     if q['sec'] != last:
         sg_html.append('<div class="sghead">%s</div>' % fmt(q['sec'])); last = q['sec']
-    sg_html.append('<div class="qa"><div class="qbox" onclick="this.parentNode.classList.toggle(\'open\')"><span class="qn">%d</span><span class="qt">%s</span></div><div class="ans">%s</div></div>'
-                   % (q['n'], fmt(q['q']), ''.join('<p>%s</p>' % fmt(a) for a in q['a'])))
+    pg = MAP[q['n']]; pn = int(pg)
+    flag = '<span class="vflag" title="Interpretation of delivered content — vocabulary">VOCAB</span>' if q['n'] in V else ''
+    sg_html.append('<div class="qa" id="q%d" data-pg="%d"><div class="qbox" onclick="openQ(%d)"><span class="qn">%d</span><span class="qt">%s</span>%s<a class="pg" href="#q%d" onclick="event.stopPropagation();go(%d);mark(%d)">p.%d</a></div><div class="ans">%s</div></div>'
+                   % (q['n'], pn, q['n'], q['n'], fmt(q['q']), flag, q['n'], pn, q['n'], pn, ''.join('<p>%s</p>' % fmt(a) for a in q['a'])))
 
 ck_html = []
 for ut, rows in check:
     ck_html.append('<div class="ckunit">%s</div>' % html.escape(ut))
     for t, pg, big in rows:
-        ck_html.append('<div class="ckrow%s" data-pg="%d"><span class="ck">&#10003;</span><span class="ckt">%s</span><a class="pg" onclick="event.stopPropagation();go(%d)">p.%d</a></div>'
+        ck_html.append('<div class="ckrow%s" data-pg="%d"><span class="ck">&#10003;</span><span class="ckt">%s</span><a class="pg" onclick="event.stopPropagation();hit(%d)">p.%d</a></div>'
                        % (' big' if big else '', pg, html.escape(t), pg, pg))
 
 loc_html = ''.join('<div class="lrow"><span>%s</span><span class="lp">%s</span></div>' %
-                   (html.escape(k), ''.join('<a onclick="go(%d)">%d</a>' % (p, p) for p in sorted(v)))
+                   (html.escape(k), ''.join('<a onclick="hit(%d)">%d</a>' % (p, p) for p in sorted(v)))
                    for k, v in sorted(loc.items(), key=lambda x: x[0].lower()))
 
 opts = ''.join('<option value="%s">%s</option>' % (p, html.escape(t)) for t, p in unit_starts)
@@ -72,6 +75,6 @@ page = open('/home/claude/School/ilaw/teacher_template.html').read()
 page = (page.replace('%%PAGES%%', json.dumps(pages)).replace('%%UNITS%%', opts)
         .replace('%%SG%%', '\n'.join(sg_html)).replace('%%NQ%%', str(len(qs)))
         .replace('%%CHECK%%', '\n'.join(ck_html)).replace('%%NCK%%', str(sum(len(r) for _, r in check)))
-        .replace('%%LOC%%', loc_html).replace('%%NLOC%%', str(len(loc))))
+        .replace('%%LOC%%', loc_html).replace('%%NLOC%%', str(len(loc))).replace('%%NV%%', str(len(V))))
 open('/home/claude/School/ilaw-teacher-book1.html', 'w').write(page)
 print('ok', len(pages), 'pages', len(qs), 'questions', sum(len(r) for _, r in check), 'checklist', len(loc), 'locator', len(page))
