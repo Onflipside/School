@@ -134,6 +134,7 @@ section.dark .lede{color:#C9C1A8}
 .tli b{display:block;font-family:'Bitter';font-size:19px}
 .tli span{color:var(--muted);font-size:15px}
 
+.give{margin-top:22px}.give b{font-family:'Bitter';font-size:18px}.gchips{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}.gchips span{background:#fff;border:2px solid var(--gold);border-radius:999px;padding:6px 13px;font-weight:700;font-size:13.5px}
 /* DUO */
 .duo{display:grid;grid-template-columns:1fr auto 1fr;gap:22px;align-items:stretch}
 .side{border-radius:22px;padding:30px;background:#fff;box-shadow:0 8px 24px rgba(24,40,83,.1)}
@@ -432,13 +433,13 @@ footer b{color:var(--gold)}
   <div class="show-grid">
     <div class="player" id="player">
       <!-- To embed the latest episode, replace the <a> below with the YouTube/Vimeo <iframe> -->
-      <a class="play" href="#TED-SHOW-LINK"><i>&#9654;</i><b>Watch the latest episode</b></a>
+      <a class="play" href="https://www.youtube.com/c/TheTedShow"><i>&#9654;</i><b>Watch the latest episode</b></a>
     </div>
     <div class="fmt">
       <div><b>Daily Interviews</b><span>One Local, one conversation, every day.</span></div>
       <div class="g"><b>On iPower Moves</b><span>The Ted Show streams on iPower Moves.</span></div>
       <div class="o"><b>On #TheFloridaLocal</b><span>Every episode runs in The Florida Local.</span></div>
-      <div class="btns" style="margin-top:4px;padding:0;background:none;border:0"><a class="btn go" href="#TED-SHOW-LINK">All Episodes</a><a class="btn ghost" href="https://ipowermoves.com">iPower Moves</a></div>
+      <div class="btns" style="margin-top:4px;padding:0;background:none;border:0"><a class="btn go" href="https://www.youtube.com/c/TheTedShow">All Episodes</a><a class="btn ghost" href="https://ipowermoves.com">iPower Moves</a></div>
     </div>
   </div>
   <div class="eps" id="eps"></div>
@@ -467,15 +468,19 @@ footer b{color:var(--gold)}
   <div class="bio">
     <div class="story">
       <p class="big">Some people work a room. Ted <em>is</em> the room. Ask anyone in downtown Orlando who they should meet, and the answer usually starts with Ted.</p>
+      <p>Insurance, mortgage and real estate — Ted has spent his career advising professionals, business owners and families on managing resources and protecting what they've built.</p>
       <p>From the 18th floor of the Citrus Tower to the set of The Ted Show, Ted has spent a career putting the right people in front of each other — and making every one of them feel like a neighbor.</p>
       <p>He's a mortgage broker, a licensed insurance instructor, host of Savvy FSBO and one of the original hosts of iPower Moves. But mostly, he's the guy who knows a guy — and that guy is going to call you back.</p>
       <div class="quote"><div class="hand">"Ted is the super social. I'm the super networked antisocial."</div><small>— JASON L. PEREZ, FOUNDER · THE INSURANCE SCHOOL</small></div>
+      <div class="give"><b>Where Ted gives back</b><div class="gchips"><span>Veterans Association of Real Estate Professionals</span><span>LGBTQ+ Real Estate Alliance</span><span>Harbor House</span><span>The Lifeboat Project</span><span>One Heart For Women &amp; Children</span><span>BASE Camp Children's Cancer Foundation</span></div></div>
     </div>
     <div class="tl">
+      <div class="tli"><small>UCF KNIGHT</small><b>B.S. Finance · Master's, Health Care Administration</b><span>University of Central Florida.</span></div>
       <div class="tli"><small>MORTGAGE</small><b>Broker, Freedom Mortgage</b><span>Where the mortgage career took off.</span></div>
       <div class="tli"><small>THE CITRUS CLUB</small><b>18th Floor · Citrus Tower</b><span>Downtown Orlando's original business club.</span></div>
       <div class="tli"><small>SAVVY FSBO</small><b>Host, Savvy FSBO</b><span>The resource The Insurance School presents to every neighbor.</span></div>
-      <div class="tli"><small>ON AIR</small><b>Host, The Ted Show</b><span>Daily interviews with The Locals.</span></div>
+      <div class="tli"><small>2017 · ON AIR</small><b>Launched The Ted Show</b><span>Community leaders, innovators, influencers, philanthropists and creators.</span></div>
+      <div class="tli"><small>ORLANDO INTERNATIONAL FASHION WEEK</small><b>Official Advocate</b><span>Businessman, socialite and community leader.</span></div>
       <div class="tli"><small>THE INSURANCE SCHOOL</small><b>School Official &amp; Instructor</b><span>With Jason from the beginning.</span></div>
       <div class="tli"><small>2026</small><b>Host, iPower Moves</b><span>Live reviews, crams and the iPower Moves stage.</span></div>
     </div>
@@ -508,11 +513,14 @@ footer b{color:var(--gold)}
   </div>
 </div></section>
 
-<!-- CLASSROOM -->
-<section class="blk" id="classroom"><div class="wrap">
-  <span class="eyebrow">THE CLASSROOM</span>
+<!-- THE SCHOOL — LIVE INSTRUCTORS MATTER (mirrors the homepage segment: /ted/live.html) -->
+<section class="blk" id="classroom" style="padding-bottom:30px"><div class="wrap">
+  <span class="eyebrow">THE INSURANCE SCHOOL · LIVE INSTRUCTORS MATTER</span>
   <h2>Learn it live <em>with Ted.</em></h2>
   <div class="lede">Instructors are people — experts who guide students through licensing. Ted is one of ours.</div>
+</div>
+<iframe id="liveframe" src="live.html" title="Live Instructors Matter · RSVP" scrolling="no" style="display:block;width:100%;max-width:1040px;margin:0 auto;border:0;height:1400px;background:transparent"></iframe>
+<div class="wrap" style="margin-top:40px">
   <div class="cards">
     <div class="card"><div class="ic">&#127891;</div><h3>Live Reviews &amp; Crams</h3><p>Ted leads live reviews and State Exam Crams for The Insurance School — Health, Life and the 2-15.</p><div class="links"><a href="/imostwanted.html">iMost WANTED Crams</a></div></div>
     <div class="card g"><div class="ic">&#128218;</div><h3>Licensing Courses</h3><p>Start your Florida license with the state's oldest and largest private DFS-authorized education provider.</p><div class="links"><a href="/2-15.html">2-15</a><a href="/2-40.html">2-40</a><a href="/2-14.html">2-14</a></div></div>
@@ -524,12 +532,12 @@ footer b{color:var(--gold)}
 <section class="blk dark" id="connect"><div class="wrap">
   <div class="center"><span class="eyebrow">CONNECT WITH TED</span><h2>Life is better when you're <em>living like a local.</em></h2><div class="lede">Connect / Collaborate. #NeverHuntAlone.</div></div>
   <div class="connect">
-    <a class="cx" href="#TED-BOOKING-LINK"><div class="ic">&#127908;</div><b>Be on The Ted Show</b><span>Request an interview with Ted.</span></a>
+    <a class="cx" href="#consulting"><div class="ic">&#127908;</div><b>Be on The Ted Show</b><span>Request an interview with Ted.</span></a>
     <a class="cx" href="#consulting"><div class="ic">&#129309;</div><b>B2B Consulting</b><span>Schedule your consult through Ted.</span></a>
     <a class="cx" href="#savvy-join"><div class="ic">&#127968;</div><b>Savvy FSBO</b><span>Get the resources your sale needs.</span></a>
   </div>
   <div class="btns" style="justify-content:center"><a class="btn gold" href="/">Get Licensed · The Insurance School</a></div>
-  <div class="socials"><a href="#TED-INSTAGRAM">Instagram</a><a href="#TED-LINKEDIN">LinkedIn</a><a href="#TED-YOUTUBE">YouTube</a><a href="#TED-FACEBOOK">Facebook</a></div>
+  <div class="socials"><a href="https://www.instagram.com/tedbogert/">Instagram · @tedbogert</a><a href="https://www.linkedin.com/in/tedbogert">LinkedIn</a><a href="https://www.youtube.com/c/TheTedShow">YouTube · The Ted Show</a></div>
 </div></section>
 
 <!-- HUBS -->
@@ -556,10 +564,10 @@ var PHOTOS=[
 ];
 /* ===== EDIT HERE: LATEST EPISODES ===== */
 var EPISODES=[
- {t:'Episode title',g:'Guest name',img:'photos/ep-01.jpg',url:'#TED-SHOW-LINK'},
- {t:'Episode title',g:'Guest name',img:'photos/ep-02.jpg',url:'#TED-SHOW-LINK'},
- {t:'Episode title',g:'Guest name',img:'photos/ep-03.jpg',url:'#TED-SHOW-LINK'},
- {t:'Episode title',g:'Guest name',img:'photos/ep-04.jpg',url:'#TED-SHOW-LINK'}
+ {t:'Episode title',g:'Guest name',img:'photos/ep-01.jpg',url:'https://www.youtube.com/c/TheTedShow'},
+ {t:'Episode title',g:'Guest name',img:'photos/ep-02.jpg',url:'https://www.youtube.com/c/TheTedShow'},
+ {t:'Episode title',g:'Guest name',img:'photos/ep-03.jpg',url:'https://www.youtube.com/c/TheTedShow'},
+ {t:'Episode title',g:'Guest name',img:'photos/ep-04.jpg',url:'https://www.youtube.com/c/TheTedShow'}
 ];
 /* ===== EDIT HERE: CALENDAR — dated events + weekly repeats ===== */
 var EVENTS=[
@@ -621,6 +629,7 @@ function upcoming(){var h='',n=0,t=new Date(now.getFullYear(),now.getMonth(),now
     evs(dt.getFullYear(),dt.getMonth(),dt.getDate()).forEach(function(e){if(n<6){h+=agRow(dt.getFullYear(),dt.getMonth(),dt.getDate(),e);n++}})}
   document.getElementById('ag').innerHTML=h}
 render();upcoming();
+window.addEventListener('message',function(e){if(e.data&&e.data.tisLiveH){document.getElementById('liveframe').style.height=(e.data.tisLiveH+4)+'px'}});
 </script>
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 </body></html>
