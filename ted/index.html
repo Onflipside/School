@@ -289,6 +289,28 @@ footer b{color:var(--gold)}
 @media(max-width:960px){.letter,.party,.book{grid-template-columns:1fr}.polys{grid-template-columns:repeat(3,1fr)}.cons{grid-template-columns:1fr 1fr}.path{grid-template-columns:1fr}.path i{transform:rotate(90deg);text-align:center}.burst{display:none}}
 @media(max-width:560px){.polys{grid-template-columns:repeat(2,1fr)}.cons,.fgrid{grid-template-columns:1fr}}
 
+.sched{margin-top:18px;display:grid;gap:8px}
+.sched small{font-weight:900;letter-spacing:2px;font-size:11px;color:var(--gold)}
+.sched a{display:block;text-decoration:none;background:var(--pill);color:var(--navy);font-weight:900;font-size:14px;border-radius:10px;padding:10px 14px}
+.sched a:hover{background:var(--gb);color:#fff}
+.sched a.txt{background:var(--gb);color:#fff}
+.segs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:20px}
+.segs a{text-decoration:none;background:#1d2c47;border:2px solid #2c3d5e;border-radius:14px;padding:14px 16px;transition:border-color .15s,transform .15s}
+.segs a:hover{border-color:var(--gold);transform:translateY(-2px)}
+.segs i{font-style:normal;font-size:22px}
+.segs b{display:block;font-family:'Bitter';font-size:17px;color:#fff;margin-top:4px}
+.segs small{color:var(--gold);font-weight:900;font-size:10.5px;letter-spacing:2px}
+.joins{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.joins a{text-decoration:none;background:#fff;border-radius:16px;padding:20px 16px;box-shadow:0 6px 18px rgba(24,40,83,.09);border-top:5px solid var(--red);transition:transform .15s}
+.joins a:hover{transform:translateY(-3px)}
+.joins b{display:block;font-family:'Bitter';font-size:17px;line-height:1.25}
+.joins small{display:block;margin-top:8px;font-weight:900;font-size:11px;letter-spacing:1.5px;color:var(--red)}
+.gchips a{background:#fff;border:2px solid var(--gold);border-radius:999px;padding:6px 13px;font-weight:700;font-size:13.5px;text-decoration:none}
+.gchips a:hover{background:var(--gold);color:#fff}
+a.ag{text-decoration:none;color:#fff}
+a.ag:hover .t b{color:var(--goldb)}
+@media(max-width:960px){.segs{grid-template-columns:1fr 1fr}.joins{grid-template-columns:1fr 1fr}}
+
 @media(max-width:960px){
  .hero .wrap,.show-grid,.bio,.calwrap{grid-template-columns:1fr}
  .slide{flex-basis:calc((100% - 18px)/2)}
@@ -420,6 +442,14 @@ footer b{color:var(--gold)}
       <h3>Schedule B2B consulting through Ted.</h3>
       <p>Pick a time. Ted will walk you through exactly how The Insurance School and our network can help your business.</p>
       <ul><li>Mortgage &amp; real estate partners</li><li>Agencies &amp; brokers</li><li>Local businesses &amp; collaborators</li><li>Entrepreneurs launching in Florida</li></ul>
+      <div class="sched">
+        <small>OR BOOK DIRECT WITH TED</small>
+        <a href="https://TheTedShow.as.me/MeetingCitrusClub">&#127864; Meet Ted at the Citrus Club</a>
+        <a href="https://thetedshow.as.me/Zoom">&#128187; Zoom Meeting with Ted</a>
+        <a href="https://thetedshow.as.me/Strategy">&#9201; 1-Hour Coaching Strategy Session</a>
+        <a href="https://thetedshow.as.me/Discovery">&#128269; Coaching Discovery Zoom</a>
+        <a class="txt" href="sms:+14078105670">&#128172; Text Ted anytime · 407-810-5670</a>
+      </div>
     </div>
     <div class="calendly-inline-widget" data-url="https://calendly.com/theinsuranceschool/30min?hide_gdpr_banner=1&amp;primary_color=c99b2d" style="min-width:300px;height:700px;"></div>
   </div>
@@ -439,13 +469,30 @@ footer b{color:var(--gold)}
       <div><b>Daily Interviews</b><span>One Local, one conversation, every day.</span></div>
       <div class="g"><b>On iPower Moves</b><span>The Ted Show streams on iPower Moves.</span></div>
       <div class="o"><b>On #TheFloridaLocal</b><span>Every episode runs in The Florida Local.</span></div>
-      <div class="btns" style="margin-top:4px;padding:0;background:none;border:0"><a class="btn go" href="https://www.youtube.com/c/TheTedShow">All Episodes</a><a class="btn ghost" href="https://ipowermoves.com">iPower Moves</a></div>
+      <div class="btns" style="margin-top:4px;padding:0;background:none;border:0"><a class="btn go" href="https://www.facebook.com/WelcomeToTheTedShow">All Episodes</a><a class="btn ghost" href="https://ipowermoves.com">iPower Moves</a></div>
     </div>
   </div>
   <div class="eps" id="eps"></div>
   <div class="guest">
-    <div><h3>Want a seat on The Ted Show?</h3><p>Locals, business owners, collaborators — Ted wants to meet you.</p></div>
-    <a class="btn dark" href="#connect">Request an Interview &rarr;</a>
+    <div><h3>Book yourself on The Ted Show!</h3><p>Pick your segment — Ted's booking calendar opens right up.</p></div>
+    <a class="btn dark" href="https://thetedshow.as.me/TheTedShow">Book The Ted Show &rarr;</a>
+  </div>
+  <div class="segs" id="book-show"><a href="https://thetedshow.as.me/TheTedShow"><i>&#11088;</i><b>The Ted Show</b><small>BOOK THIS SEGMENT</small></a><a href="https://thetedshow.as.me/Deconstructed"><i>&#128588;</i><b>DeconstrucTed</b><small>BOOK THIS SEGMENT</small></a><a href="https://thetedshow.as.me/HeroesAlwaysWelcome"><i>&#127482;&#127480;</i><b>Heroes Always Welcome</b><small>BOOK THIS SEGMENT</small></a><a href="https://thetedshow.as.me/Foodies"><i>&#128523;</i><b>Foodies</b><small>BOOK THIS SEGMENT</small></a><a href="https://thetedshow.as.me/NonProfit"><i>&#9786;&#65039;</i><b>NonProfits</b><small>BOOK THIS SEGMENT</small></a><a href="https://thetedshow.as.me/TheArts"><i>&#127917;</i><b>The Arts</b><small>BOOK THIS SEGMENT</small></a><a href="https://thetedshow.as.me/TheTedShowMusic"><i>&#127926;</i><b>Musical Guests</b><small>BOOK THIS SEGMENT</small></a><a href="https://thetedshow.as.me/ORRAAffiliates"><i>&#127969;</i><b>ORRA Affiliates</b><small>BOOK THIS SEGMENT</small></a><a href="https://thetedshow.as.me/WomensCouncilofRealtors"><i>&#127969;</i><b>Women's Council of REALTORS</b><small>BOOK THIS SEGMENT</small></a><a href="https://thetedshow.as.me/NAHREP"><i>&#127969;</i><b>NAHREP</b><small>BOOK THIS SEGMENT</small></a><a href="https://thetedshow.as.me/WindermereChamber"><i>&#127897;&#65039;</i><b>Windermere Chamber</b><small>BOOK THIS SEGMENT</small></a></div>
+  <div class="btns" style="justify-content:center;margin-top:26px"><a class="btn ghost" href="https://www.facebook.com/WelcomeToTheTedShow">Latest Episodes · Facebook</a><a class="btn ghost" href="http://podcasters.spotify.com/pod/show/thetedshowlive">&#127911; The Ted Show Podcast · Spotify</a><a class="btn ghost" href="https://linktr.ee/thetedshowlive">The Ted Show Socials</a></div>
+</div></section>
+
+
+<!-- JOIN TED'S NETWORKS -->
+<section class="blk alt" id="join"><div class="wrap">
+  <span class="eyebrow">REAL ESTATE · JOIN TED'S NETWORKS</span>
+  <h2>Ted's rooms are <em>open to you.</em></h2>
+  <div class="lede">The real estate organizations Ted helps lead — join, and you'll see him at every one.</div>
+  <div class="joins">
+    <a href="https://www.orlandorealtors.org/affiliates#join"><b>Orlando Real Estate Affiliates</b><small>ORRA · JOIN NOW</small></a>
+    <a href="https://www.wcr.org/join-now/"><b>Women's Council of REALTORS&reg;</b><small>ORLANDO NETWORK · JOIN NOW</small></a>
+    <a href="https://www.facebook.com/share/1ab6LLDrDU/"><b>Orlando Real Estate Pride Network</b><small>JOIN NOW</small></a>
+    <a href="https://www.orlandorealtors.org/mac"><b>ORRA Military Advisory Council</b><small>&#127482;&#127480; MAC · JOIN</small></a>
+    <a href="https://nahrepnorthorlando.org/membership"><b>NAHREP North Orlando</b><small>MEMBERSHIP · JOIN</small></a>
   </div>
 </div></section>
 
@@ -472,7 +519,7 @@ footer b{color:var(--gold)}
       <p>From the 18th floor of the Citrus Tower to the set of The Ted Show, Ted has spent a career putting the right people in front of each other — and making every one of them feel like a neighbor.</p>
       <p>He's a mortgage broker, a licensed insurance instructor, host of Savvy FSBO and one of the original hosts of iPower Moves. But mostly, he's the guy who knows a guy — and that guy is going to call you back.</p>
       <div class="quote"><div class="hand">"Ted is the super social. I'm the super networked antisocial."</div><small>— JASON L. PEREZ, FOUNDER · THE INSURANCE SCHOOL</small></div>
-      <div class="give"><b>Where Ted gives back</b><div class="gchips"><span>Veterans Association of Real Estate Professionals</span><span>LGBTQ+ Real Estate Alliance</span><span>Harbor House</span><span>The Lifeboat Project</span><span>One Heart For Women &amp; Children</span><span>BASE Camp Children's Cancer Foundation</span></div></div>
+      <div class="give"><b>Ted's community</b><div class="gchips"><a href="https://www.facebook.com/orlandorealtors">Orlando Regional REALTOR&reg; Association</a><a href="https://www.facebook.com/share/g/18ujY2U4et/">ORRA Military Advisory Council</a><a href="https://www.facebook.com/VAREPCentralFlorida">Veterans Association of Real Estate Professionals</a><a href="https://www.facebook.com/WeAreSFH">We Are SFH!</a><a href="https://www.facebook.com/share/g/1ESyvdPpSm/">Orlando Sigma Chi Alumni</a><a href="https://www.facebook.com/share/1LSXhx3DMZ/">BASE Camp Children's Cancer Foundation</a><a href="https://www.facebook.com/share/1C8btNtnaM/">The Lifeboat Project</a><a href="https://orlandofashionweek.org/board">Orlando International Fashion Week · Board</a><span>LGBTQ+ Real Estate Alliance</span><span>Harbor House</span><span>One Heart For Women &amp; Children</span></div></div>
     </div>
     <div class="tl">
       <div class="tli"><small>UCF KNIGHT</small><b>B.S. Finance · Master's, Health Care Administration</b><span>University of Central Florida.</span></div>
@@ -480,7 +527,7 @@ footer b{color:var(--gold)}
       <div class="tli"><small>THE CITRUS CLUB</small><b>18th Floor · Citrus Tower</b><span>Downtown Orlando's original business club.</span></div>
       <div class="tli"><small>SAVVY FSBO</small><b>Host, Savvy FSBO</b><span>The resource The Insurance School presents to every neighbor.</span></div>
       <div class="tli"><small>2017 · ON AIR</small><b>Launched The Ted Show</b><span>Community leaders, innovators, influencers, philanthropists and creators.</span></div>
-      <div class="tli"><small>ORLANDO INTERNATIONAL FASHION WEEK</small><b>Official Advocate</b><span>Businessman, socialite and community leader.</span></div>
+      <div class="tli"><small>ORLANDO INTERNATIONAL FASHION WEEK</small><b>Board of Directors &amp; Official Advocate</b><span>Businessman, socialite and community leader.</span></div>
       <div class="tli"><small>THE INSURANCE SCHOOL</small><b>School Official &amp; Instructor</b><span>With Jason from the beginning.</span></div>
       <div class="tli"><small>2026</small><b>Host, iPower Moves</b><span>Live reviews, crams and the iPower Moves stage.</span></div>
     </div>
@@ -509,7 +556,7 @@ footer b{color:var(--gold)}
       <div class="days" id="days"></div>
       <div class="legend"><span><i class="c-show"></i>The Ted Show</span><span><i class="c-class"></i>iLaw · Live Class</span><span><i class="c-health"></i>Health</span><span><i class="c-life"></i>Life</span><span><i class="c-ipm"></i>iPower Moves</span><span><i class="c-net"></i>Networking</span></div>
     </div>
-    <div class="agenda"><h3 id="agt">Coming Up</h3><div class="sub" id="ags">Ted's next stops</div><div id="ag"></div><div class="btns" style="margin-top:16px"><a class="btn gold" href="#connect">Meet Ted There</a></div></div>
+    <div class="agenda"><h3 id="agt">Coming Up</h3><div class="sub" id="ags">Ted's next events — tap to get tickets</div><div id="ag"></div><div class="btns" style="margin-top:16px"><a class="btn gold" href="#connect">Meet Ted There</a></div></div>
   </div>
 </div></section>
 
@@ -532,12 +579,12 @@ footer b{color:var(--gold)}
 <section class="blk dark" id="connect"><div class="wrap">
   <div class="center"><span class="eyebrow">CONNECT WITH TED</span><h2>Life is better when you're <em>living like a local.</em></h2><div class="lede">Connect / Collaborate. #NeverHuntAlone.</div></div>
   <div class="connect">
-    <a class="cx" href="#consulting"><div class="ic">&#127908;</div><b>Be on The Ted Show</b><span>Request an interview with Ted.</span></a>
+    <a class="cx" href="#book-show"><div class="ic">&#127908;</div><b>Be on The Ted Show</b><span>Book your segment.</span></a>
     <a class="cx" href="#consulting"><div class="ic">&#129309;</div><b>B2B Consulting</b><span>Schedule your consult through Ted.</span></a>
     <a class="cx" href="#savvy-join"><div class="ic">&#127968;</div><b>Savvy FSBO</b><span>Get the resources your sale needs.</span></a>
   </div>
-  <div class="btns" style="justify-content:center"><a class="btn gold" href="/">Get Licensed · The Insurance School</a></div>
-  <div class="socials"><a href="https://www.instagram.com/tedbogert/">Instagram · @tedbogert</a><a href="https://www.linkedin.com/in/tedbogert">LinkedIn</a><a href="https://www.youtube.com/c/TheTedShow">YouTube · The Ted Show</a></div>
+  <div class="btns" style="justify-content:center"><a class="btn go" href="sms:+14078105670">&#128172; Text Ted · 407-810-5670</a><a class="btn gold" href="/">Get Licensed · The Insurance School</a></div>
+  <div class="socials"><a href="https://www.instagram.com/tedbogert/">Instagram · @tedbogert</a><a href="https://www.linkedin.com/in/tedbogert">LinkedIn</a><a href="https://www.youtube.com/c/TheTedShow">YouTube · The Ted Show</a><a href="https://www.facebook.com/WelcomeToTheTedShow">Facebook · The Ted Show</a><a href="http://podcasters.spotify.com/pod/show/thetedshowlive">Spotify</a><a href="https://linktr.ee/tedbogert">Ted's Linktree</a></div>
 </div></section>
 
 <!-- HUBS -->
@@ -572,6 +619,16 @@ var EPISODES=[
 /* ===== EDIT HERE: CALENDAR — dated events + weekly repeats ===== */
 var EVENTS=[
  {d:'2026-11-05',t:'iLaw · Day ONE Orientation',c:'c-class',w:'Live · The Insurance School'},
+ {d:'2026-11-05',t:"America's Real Estate Show 2026",c:'c-net',w:'Register',u:'https://form.jotform.com/243618660002146'},
+ {d:'2026-11-06',t:'REALTOR® Veteran Appreciation Luncheon',c:'c-net',w:'ORRA Military Advisory Council',u:'https://www.simpletix.com/e/realtor-veteran-appreciation-luncheon-tickets-286257'},
+ {d:'2026-11-06',t:'Orlando Greek Fest',c:'c-net',w:'Nov 6–8',u:'https://facebook.com/events/s/orlando-greek-fest-2026/899735263188532'},
+ {d:'2026-11-07',t:'Orlando Greek Fest',c:'c-net',w:'Nov 6–8',u:'https://facebook.com/events/s/orlando-greek-fest-2026/899735263188532'},
+ {d:'2026-11-07',t:'Veterans Day Parade · ORRA',c:'c-net',w:'City of Orlando',u:'https://www.simpletix.com/e/city-of-orlando-veteran-day-parade-tickets-286279'},
+ {d:'2026-11-08',t:'Orlando Greek Fest',c:'c-net',w:'Nov 6–8',u:'https://facebook.com/events/s/orlando-greek-fest-2026/899735263188532'},
+ {d:'2026-11-09',t:'Citrus Club Charity Classic',c:'c-net',w:'Golf Tournament & Pairings Party',u:'https://citrus-club-charity-classic-golf-tournament.eventlify.com'},
+ {d:'2026-11-20',t:'Mission Gratitude',c:'c-net',w:'ORRA Military Advisory Council',u:'https://www.simpletix.com/e/mission-gratitude-tickets-286288'},
+ {d:'2026-11-20',t:"Women's Council of REALTORS® Gala",c:'c-net',w:'Orlando Gala & Installation',u:'https://www.zeffy.com/en-US/ticketing/the-womens-council-of-realtorsr-orlando-regional-annual-gala-and-member-awards'},
+ {d:'2026-12-12',t:'A Walk For Change 2026',c:'c-net',w:'Register',u:'https://givebutter.com/awalkforchange/harmonyhealthcare/Darcelstevens'},
 ];
 var WEEKLY=[ // 0=Sun … 6=Sat
  {dow:[1,2,3,4,5],t:'The Ted Show',c:'c-show',w:'Daily interview · The Locals'},
@@ -604,9 +661,9 @@ document.getElementById('eps').innerHTML=EPISODES.map(function(e,i){
 var MN=['January','February','March','April','May','June','July','August','September','October','November','December'],DN=['SUN','MON','TUE','WED','THU','FRI','SAT'];
 var now=new Date(),vy=now.getFullYear(),vm=now.getMonth(),sel=null;
 function key(y,m,d){return y+'-'+String(m+1).padStart(2,'0')+'-'+String(d).padStart(2,'0')}
-function evs(y,m,d){var k=key(y,m,d),dow=new Date(y,m,d).getDay(),out=[];
+function evs(y,m,d,only){var k=key(y,m,d),dow=new Date(y,m,d).getDay(),out=[];
   EVENTS.forEach(function(e){if(e.d===k)out.push(e)});
-  WEEKLY.forEach(function(e){if(e.dow.indexOf(dow)>=0)out.push(e)});return out}
+  if(!only)WEEKLY.forEach(function(e){if(e.dow.indexOf(dow)>=0)out.push(e)});return out}
 function render(){
   document.getElementById('mlabel').textContent=MN[vm]+' '+vy;
   var first=new Date(vy,vm,1).getDay(),dim=new Date(vy,vm+1,0).getDate(),h='';
@@ -620,13 +677,13 @@ function render(){
   document.getElementById('days').innerHTML=h;
 }
 function mv(n){vm+=n;if(vm<0){vm=11;vy--}if(vm>11){vm=0;vy++}render()}
-function agRow(y,m,d,e){var dt=new Date(y,m,d);return '<div class="ag"><div class="d"><small>'+DN[dt.getDay()]+'</small><b>'+d+'</b></div><div class="t"><b><i class="'+e.c+'"></i>'+e.t+'</b><span>'+MN[m].slice(0,3)+' '+d+' · '+e.w+'</span></div></div>'}
+function agRow(y,m,d,e){var dt=new Date(y,m,d);var tag=e.u?'a href="'+e.u+'" target="_blank" rel="noopener"':'div';return '<'+tag+' class="ag"><div class="d"><small>'+DN[dt.getDay()]+'</small><b>'+d+'</b></div><div class="t"><b><i class="'+e.c+'"></i>'+e.t+'</b><span>'+MN[m].slice(0,3)+' '+d+' · '+e.w+(e.u?' &rarr;':'')+'</span></div></'+(e.u?'a':'div')+'>'}
 function pick(d){sel=key(vy,vm,d);render();var l=evs(vy,vm,d);
   document.getElementById('agt').textContent=MN[vm]+' '+d;document.getElementById('ags').textContent=l.length?'Where Ted will be':'Nothing posted — reach out';
   document.getElementById('ag').innerHTML=l.map(function(e){return agRow(vy,vm,d,e)}).join('')}
 function upcoming(){var h='',n=0,t=new Date(now.getFullYear(),now.getMonth(),now.getDate());
-  for(var i=0;i<21&&n<6;i++){var dt=new Date(t);dt.setDate(t.getDate()+i);
-    evs(dt.getFullYear(),dt.getMonth(),dt.getDate()).forEach(function(e){if(n<6){h+=agRow(dt.getFullYear(),dt.getMonth(),dt.getDate(),e);n++}})}
+  for(var i=0;i<45&&n<7;i++){var dt=new Date(t);dt.setDate(t.getDate()+i);
+    evs(dt.getFullYear(),dt.getMonth(),dt.getDate(),1).forEach(function(e){if(n<7){h+=agRow(dt.getFullYear(),dt.getMonth(),dt.getDate(),e);n++}})}
   document.getElementById('ag').innerHTML=h}
 render();upcoming();
 window.addEventListener('message',function(e){if(e.data&&e.data.tisLiveH){document.getElementById('liveframe').style.height=(e.data.tisLiveH+4)+'px'}});
