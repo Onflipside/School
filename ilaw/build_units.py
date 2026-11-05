@@ -1,10 +1,10 @@
-# Builds the 15 iLaw unit Survival Guides (+ hub) into /home/claude/School/ilaw-guide/
+# Builds the 15 iLaw unit Survival Guides (+ hub) into /home/claude/School/ilaw1/
 import json, re, html, sys, os
 sys.path.insert(0, '/home/claude/School/ilaw')
 from master_toc import UNITS, OFFSET
 from sg_pages import MAP, V
 from build_teacher import qs, fmt   # reuses parsed SG key + formatter
-OUT = '/home/claude/School/ilaw-guide'; os.makedirs(OUT, exist_ok=True)
+OUT = '/home/claude/School/ilaw1'; os.makedirs(OUT, exist_ok=True)
 tpl = open('/home/claude/School/ilaw/unit_template.html').read()
 NUM = ['ONE','TWO','THREE','FOUR','FIVE','SIX','SEVEN','EIGHT','NINE','TEN','ELEVEN','TWELVE','THIRTEEN','FOURTEEN','FIFTEEN']
 starts = [ss[0][2] - OFFSET for _, ss in UNITS]; starts[0] = 8
