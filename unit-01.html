@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iLaw Unit ONE | WHOOP – WHOOP is the sound of the POLICE!</title>
+<meta name="description" content="iLaw Book ONE, Unit ONE: WHOOP – WHOOP is the sound of the POLICE!. Survival Guide questions, checklist and locator. The Insurance School.">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,800;1,600&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1B2A44;--dfs:#182853;--cream:#FAF6EC;--card:#FDFBF3;--gold:#C99B2D;--pill:#F0C24B;--orange:#DD7E2F;--green:#3E9E4F;--gb:#43B04A;--purple:#6B3FA0;--parch:#EFE7D2}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--cream);color:var(--navy);font-family:'Lato',sans-serif;font-size:15px;line-height:1.5}
+header{background:var(--navy);color:#fff;padding:14px 22px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:20}
+header h1{font-family:'Bitter';font-size:20px;font-weight:800}
+header h1 b{color:var(--gold)}
+.badge{background:#3E9E4F;color:#fff;font-weight:900;font-size:11px;letter-spacing:1px;border-radius:999px;padding:3px 10px;margin-left:8px;vertical-align:middle}
+header select{font-family:'Bitter';font-size:14px;padding:6px 8px;border-radius:6px;border:2px solid var(--gold);max-width:340px}
+.wrap{max-width:1400px;margin:0 auto;padding:18px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:22px}
+.viewer{position:sticky;top:74px;align-self:start}
+.pgbox{background:var(--parch);border-radius:14px;padding:12px;box-shadow:0 6px 20px rgba(24,40,83,.12)}
+.pgbox img{width:100%;display:block;border-radius:8px;background:#fff;max-height:calc(100vh - 190px);object-fit:contain}
+.bar{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:10px}
+.bar button{width:40px;height:40px;border-radius:50%;border:none;background:var(--navy);color:#fff;font-size:20px;font-weight:800;cursor:pointer}
+.bar button:hover{background:var(--gold);color:var(--navy)}
+.bar input{width:70px;text-align:center;font-family:'Bitter';font-weight:800;font-size:16px;padding:6px;border-radius:8px;border:2px solid var(--green)}
+.bar .of{font-family:'Bitter';font-weight:800}
+.panel{background:var(--card);border-radius:14px;box-shadow:0 4px 14px rgba(24,40,83,.1);margin-bottom:22px}
+.ph{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:3px solid var(--gold)}
+.ph h2{font-family:'Bitter';font-size:19px}
+.ph .cnt{background:var(--pill);border-radius:999px;padding:4px 14px;font-family:'Bitter';font-weight:800;font-size:14px}
+.ph button{font-family:'Bitter';font-weight:800;font-size:12px;border:2px solid var(--green);background:#fff;color:var(--green);border-radius:999px;padding:5px 12px;cursor:pointer}
+.scroll{max-height:70vh;overflow-y:auto;padding:10px 18px 18px}
+.sghead{font-family:'Bitter';font-weight:800;color:#fff;background:var(--dfs);border-radius:8px;padding:7px 12px;margin:16px 0 8px}
+.qa{margin:8px 0}
+.qbox{display:flex;gap:10px;align-items:flex-start;border:2px solid var(--orange);border-right:7px solid var(--orange);border-radius:12px;padding:9px 12px;cursor:pointer;font-family:'Bitter';font-weight:600}
+.qn{flex:0 0 auto;min-width:30px;height:30px;border-radius:50%;background:var(--orange);color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+.ans{display:none;margin:6px 0 0 40px;background:var(--parch);border-left:5px solid var(--green);border-radius:10px;padding:10px 14px;font-size:14px}
+.ans p+p{margin-top:6px}
+.qa.open .ans,body.showall .ans{display:block}
+.qa.open .qn,body.showall .qn{background:var(--gb)}
+.code{color:var(--purple);font-weight:700;font-size:12.5px}
+.tag{color:var(--orange);font-weight:800}
+.ckunit{font-family:'Bitter';font-weight:800;margin:14px 0 4px;color:var(--dfs)}
+.ckrow{display:flex;gap:10px;align-items:center;padding:6px 4px;border-bottom:1px solid #eadfc4;cursor:pointer;font-size:13.5px}
+.ckrow.big{font-weight:800;font-family:'Bitter'}
+.ck{flex:0 0 auto;width:20px;height:20px;border-radius:50%;border:2px solid #b9ab86;color:transparent;font-size:12px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.ckrow.done .ck{background:var(--gb);border-color:var(--gb);color:#fff}
+.ckrow.done .ckt{text-decoration:line-through;color:#9a8f73}
+.ckt{flex:1}
+a.pg,.lp a{flex:0 0 auto;background:var(--pill);color:var(--navy);font-weight:800;font-size:11.5px;border-radius:6px;padding:2px 7px;cursor:pointer;text-decoration:none}
+a.pg:hover,.lp a:hover{background:var(--gb);color:#fff}
+.lgrid{display:grid;grid-template-columns:1fr 1fr;column-gap:24px}
+.lrow{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px solid #eadfc4;font-size:13.5px}
+.lp{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}
+.find{width:100%;padding:8px 12px;border:2px solid #d8cba7;border-radius:8px;font-size:14px;margin:10px 0}
+.full{grid-column:1/-1}
+.unav{max-width:1400px;margin:14px auto 0;padding:0 18px;display:flex;justify-content:space-between;gap:10px;font-family:'Bitter';font-weight:800}
+.unav a{background:var(--navy);color:#fff;text-decoration:none;border-radius:999px;padding:7px 16px;font-size:14px}
+.unav a:hover{background:var(--gold);color:var(--navy)}
+.unav span{flex:1}
+.empty{padding:14px 4px;color:#7a6a48;font-style:italic}
+.qbox .qt{flex:1}
+.qbox a.pg{align-self:center}
+.vflag{flex:0 0 auto;align-self:center;background:var(--purple);color:#fff;font-family:'Lato';font-weight:900;font-size:10px;letter-spacing:1px;border-radius:999px;padding:2px 8px}
+.qa.hit .qbox{background:#FFF3C4;box-shadow:0 0 0 3px var(--pill)}
+.nohit{font-size:12.5px;color:#9a8f73;padding:4px 0 0}
+@media(max-width:900px){.wrap{grid-template-columns:1fr}.viewer{position:static}.lgrid{grid-template-columns:1fr}}
+@media print{header,.bar,.viewer{display:none}.scroll{max-height:none}.ans{display:block}}
+</style></head>
+<body>
+<header>
+  <h1><a href="index.html" style="color:inherit;text-decoration:none"><b>iLAW</b> | Book ONE</a> — Unit ONE | WHOOP – WHOOP is the sound of the POLICE! <span class="badge">SURVIVAL GUIDE</span></h1>
+  <select id="unit" onchange="location.href=this.value"><option value="index.html">All 15 Units</option><option value="unit-01.html" selected>Unit ONE | WHOOP – WHOOP is the sound of the POLICE!</option><option value="unit-02.html">Unit TWO | Meet Florida’s NEW CFO - Blaise Ingoglia</option><option value="unit-03.html">Unit THREE | History of US Insurance Regulations</option><option value="unit-04.html">Unit FOUR | Division of Consumer Services</option><option value="unit-05.html">Unit FIVE | DFS Division of Unclaimed Property – My Florida CFO .com</option><option value="unit-06.html">Unit SIX | DFS Division of Criminal Investigations</option><option value="unit-07.html">Unit SEVEN | CFO / DFS Authority – PRESS RELEASE</option><option value="unit-08.html">Unit EIGHT | Division of Insurance Agent &amp; Agency Services</option><option value="unit-09.html">Unit NINE | More Crimes Against Logic - 08.20.2026</option><option value="unit-10.html">Unit TEN | Maintaining an Insurance License</option><option value="unit-11.html">Unit ELEVEN | Non-Resident Licensing, Recordkeeping &amp; Contract Vocabulary</option><option value="unit-12.html">Unit TWELVE | Florida’s Office of Insurance Regulations - OIR</option><option value="unit-13.html">Unit THIRTEEN | Ensuring INSURER Financial Stability – ( OIR )</option><option value="unit-14.html">Unit FOURTEEN | iFlash4u Vocabulary – ( Review )</option><option value="unit-15.html">Unit FIFTEEN | Fines, Crimes &amp; FELONIES.</option></select>
+</header>
+<div class="unav"><a href="index.html">&larr; All Units</a><span></span><a href="unit-02.html">Unit TWO &rarr;</a></div>
+<div class="wrap">
+  <div class="viewer">
+    <div class="pgbox"><img id="pg" alt="page"></div>
+    <div class="bar">
+      <button onclick="step(-1)" aria-label="Previous">&#8249;</button>
+      <span class="of">PAGE</span><input id="pin" onchange="go(this.value)"><span class="of" id="ptot"></span>
+      <button onclick="step(1)" aria-label="Next">&#8250;</button>
+    </div>
+  </div>
+  <div>
+    <div class="panel">
+      <div class="ph"><h2>Survival Guide | KEY</h2><span class="cnt">9 Questions · 1 Vocab</span><button onclick="document.body.classList.toggle('showall')">Show / hide all answers</button></div>
+      <div class="scroll" id="sg"><div class="sghead">FSC | Commission Members</div>
+<div class="qa" id="q34" data-pg="17"><div class="qbox" onclick="openQ(34)"><span class="qn">34</span><span class="qt">When engaging new insurance prospects, what MUST licensees do upon initial introduction?</span><a class="pg" href="#q34" onclick="event.stopPropagation();go(17);mark(34)">p.17</a></div><div class="ans"><p>Properly identify themselves as a licensed insurance agent.</p></div></div>
+<div class="sghead">Division of Criminal INVESTIGATIONS</div>
+<div class="qa" id="q117" data-pg="9"><div class="qbox" onclick="openQ(117)"><span class="qn">117</span><span class="qt">CFO / Department of Financial Services can revoke an insurance license even if the individual has NOT been convicted of a crime.</span><span class="vflag" title="Interpretation of delivered content — vocabulary">VOCAB</span><a class="pg" href="#q117" onclick="event.stopPropagation();go(9);mark(117)">p.9</a></div><div class="ans"></div></div>
+<div class="qa" id="q119" data-pg="10"><div class="qbox" onclick="openQ(119)"><span class="qn">119</span><span class="qt">WHAT type of HAZARD is Driving under the influence of drugs or alcohol?</span><a class="pg" href="#q119" onclick="event.stopPropagation();go(10);mark(119)">p.10</a></div><div class="ans"><p>Morale Hazard</p></div></div>
+<div class="qa" id="q120" data-pg="10"><div class="qbox" onclick="openQ(120)"><span class="qn">120</span><span class="qt">WHAT type of HAZARD is drinking excessively at home?</span><a class="pg" href="#q120" onclick="event.stopPropagation();go(10);mark(120)">p.10</a></div><div class="ans"><p>Moral Hazard</p></div></div>
+<div class="qa" id="q121" data-pg="15"><div class="qbox" onclick="openQ(121)"><span class="qn">121</span><span class="qt">WHAT type of HAZARD does someone have if they only have one leg?</span><a class="pg" href="#q121" onclick="event.stopPropagation();go(15);mark(121)">p.15</a></div><div class="ans"><p>Physical Hazard</p></div></div>
+<div class="sghead">#iFlash4U | Keywords &amp; Concepts</div>
+<div class="qa" id="q163" data-pg="10"><div class="qbox" onclick="openQ(163)"><span class="qn">163</span><span class="qt">Insurance licensees MUST be either employed by an insurer (OR) insurance agency.</span><a class="pg" href="#q163" onclick="event.stopPropagation();go(10);mark(163)">p.10</a></div><div class="ans"><p>INDEPENDENT Insurance Brokers ARE NOT Employed by an Insurer ( OR ) Agency.</p></div></div>
+<div class="qa" id="q172" data-pg="14"><div class="qbox" onclick="openQ(172)"><span class="qn">172</span><span class="qt">HOW long do licensees have to notify the DFS of a change of contact info?</span><a class="pg" href="#q172" onclick="event.stopPropagation();go(14);mark(172)">p.14</a></div><div class="ans"><p>30-Days</p></div></div>
+<div class="qa" id="q175" data-pg="14"><div class="qbox" onclick="openQ(175)"><span class="qn">175</span><span class="qt">If a licensee receives a CIVIL ADMINISTRATIVE Penalty for breaching their fiduciary responsibilities, do they need to notify the Department?</span><a class="pg" href="#q175" onclick="event.stopPropagation();go(14);mark(175)">p.14</a></div><div class="ans"><p>YES... Licensees MUST notify the DFS of Administrative &amp; legal actions against them within 30-DAYS.</p><p><span class="code">_(*[(26.6.5.5) p. 420])</span></p></div></div>
+<div class="qa" id="q176" data-pg="14"><div class="qbox" onclick="openQ(176)"><span class="qn">176</span><span class="qt">How long do licensees have to notify the DFS of a criminal conviction.</span><a class="pg" href="#q176" onclick="event.stopPropagation();go(14);mark(176)">p.14</a></div><div class="ans"><p>30-Days</p></div></div></div>
+    </div>
+  </div>
+  <div class="panel full">
+    <div class="ph"><h2><span style="color:var(--gold)">i</span>FLASH4u | Keyword &amp; Concept Checklist</h2><span class="cnt"><span id="ckd">0</span> / 34 Identified</span></div>
+    <div class="scroll" id="ck"><div class="ckunit">Unit ONE | WHOOP – WHOOP is the sound of the POLICE!</div>
+<div class="ckrow big" data-pg="8"><span class="ck">&#10003;</span><span class="ckt">iFLASH4u | LOOK OUT! – (U1)</span><a class="pg" onclick="event.stopPropagation();hit(8)">p.8</a></div>
+<div class="ckrow big" data-pg="9"><span class="ck">&#10003;</span><span class="ckt">1.1 | “ Karen got CAUGHT coming in HOT! ” – VIOLATION</span><a class="pg" onclick="event.stopPropagation();hit(9)">p.9</a></div>
+<div class="ckrow" data-pg="9"><span class="ck">&#10003;</span><span class="ckt">CFO Press Release: DFS ( VS ) Karen S. Baker – FELONY DUI</span><a class="pg" onclick="event.stopPropagation();hit(9)">p.9</a></div>
+<div class="ckrow" data-pg="9"><span class="ck">&#10003;</span><span class="ckt">[ Identify ] Professional Responsibility – Misappropriation of funds</span><a class="pg" onclick="event.stopPropagation();hit(9)">p.9</a></div>
+<div class="ckrow" data-pg="10"><span class="ck">&#10003;</span><span class="ckt">[ Contrast ] MORAL ( VS ) MoralE</span><a class="pg" onclick="event.stopPropagation();hit(10)">p.10</a></div>
+<div class="ckrow" data-pg="10"><span class="ck">&#10003;</span><span class="ckt">AGENT | EMPLOYEE</span><a class="pg" onclick="event.stopPropagation();hit(10)">p.10</a></div>
+<div class="ckrow" data-pg="10"><span class="ck">&#10003;</span><span class="ckt">( VS ) Independent BROKER</span><a class="pg" onclick="event.stopPropagation();hit(10)">p.10</a></div>
+<div class="ckrow" data-pg="11"><span class="ck">&#10003;</span><span class="ckt">Who Regulates Insurers in Florida?</span><a class="pg" onclick="event.stopPropagation();hit(11)">p.11</a></div>
+<div class="ckrow" data-pg="11"><span class="ck">&#10003;</span><span class="ckt">AGENT | One Insurer Appointment – [ Contrast ] Broker</span><a class="pg" onclick="event.stopPropagation();hit(11)">p.11</a></div>
+<div class="ckrow big" data-pg="11"><span class="ck">&#10003;</span><span class="ckt">1.2 | WHAT is a FIDUCIARY?</span><a class="pg" onclick="event.stopPropagation();hit(11)">p.11</a></div>
+<div class="ckrow" data-pg="11"><span class="ck">&#10003;</span><span class="ckt">WHAT is the role of a Professional Liaison.</span><a class="pg" onclick="event.stopPropagation();hit(11)">p.11</a></div>
+<div class="ckrow" data-pg="12"><span class="ck">&#10003;</span><span class="ckt">WHAT type of information does a licensee convey?</span><a class="pg" onclick="event.stopPropagation();hit(12)">p.12</a></div>
+<div class="ckrow" data-pg="12"><span class="ck">&#10003;</span><span class="ckt">INSURANCE Policy Application</span><a class="pg" onclick="event.stopPropagation();hit(12)">p.12</a></div>
+<div class="ckrow" data-pg="12"><span class="ck">&#10003;</span><span class="ckt">PART-III of an Insurance Policy Application is TESTED!</span><a class="pg" onclick="event.stopPropagation();hit(12)">p.12</a></div>
+<div class="ckrow big" data-pg="14"><span class="ck">&#10003;</span><span class="ckt">1.3 | CRIMES, FINES &amp; Felonies – ( Part ONE )</span><a class="pg" onclick="event.stopPropagation();hit(14)">p.14</a></div>
+<div class="ckrow" data-pg="14"><span class="ck">&#10003;</span><span class="ckt">[ Identify ] Only PEOPLE can commit a crime.</span><a class="pg" onclick="event.stopPropagation();hit(14)">p.14</a></div>
+<div class="ckrow" data-pg="14"><span class="ck">&#10003;</span><span class="ckt">DFS Communications Timeframes</span><a class="pg" onclick="event.stopPropagation();hit(14)">p.14</a></div>
+<div class="ckrow" data-pg="14"><span class="ck">&#10003;</span><span class="ckt">ARREST = 30-DAYS</span><a class="pg" onclick="event.stopPropagation();hit(14)">p.14</a></div>
+<div class="ckrow" data-pg="14"><span class="ck">&#10003;</span><span class="ckt">Administrative Penalties 30-DAYS</span><a class="pg" onclick="event.stopPropagation();hit(14)">p.14</a></div>
+<div class="ckrow" data-pg="14"><span class="ck">&#10003;</span><span class="ckt">ANY Change to Personal Contact Info.</span><a class="pg" onclick="event.stopPropagation();hit(14)">p.14</a></div>
+<div class="ckrow big" data-pg="15"><span class="ck">&#10003;</span><span class="ckt">1.4 | iFLASH4u Keywords &amp; Concepts</span><a class="pg" onclick="event.stopPropagation();hit(15)">p.15</a></div>
+<div class="ckrow" data-pg="15"><span class="ck">&#10003;</span><span class="ckt">MORAL &amp; MORALE Hazards. [ Define ] Hazard</span><a class="pg" onclick="event.stopPropagation();hit(15)">p.15</a></div>
+<div class="ckrow" data-pg="15"><span class="ck">&#10003;</span><span class="ckt">[ Define ] HAZARD</span><a class="pg" onclick="event.stopPropagation();hit(15)">p.15</a></div>
+<div class="ckrow" data-pg="15"><span class="ck">&#10003;</span><span class="ckt">[ Identify ] Aviation Questionnaire</span><a class="pg" onclick="event.stopPropagation();hit(15)">p.15</a></div>
+<div class="ckrow" data-pg="15"><span class="ck">&#10003;</span><span class="ckt">AVIATION Questionnaire</span><a class="pg" onclick="event.stopPropagation();hit(15)">p.15</a></div>
+<div class="ckrow" data-pg="15"><span class="ck">&#10003;</span><span class="ckt">Physical Hazards</span><a class="pg" onclick="event.stopPropagation();hit(15)">p.15</a></div>
+<div class="ckrow" data-pg="15"><span class="ck">&#10003;</span><span class="ckt">PRESUMPTIVE Disabilities</span><a class="pg" onclick="event.stopPropagation();hit(15)">p.15</a></div>
+<div class="ckrow" data-pg="16"><span class="ck">&#10003;</span><span class="ckt">What is a Peril?</span><a class="pg" onclick="event.stopPropagation();hit(16)">p.16</a></div>
+<div class="ckrow big" data-pg="17"><span class="ck">&#10003;</span><span class="ckt">1.5 | HELLO NEIGHBOR!</span><a class="pg" onclick="event.stopPropagation();hit(17)">p.17</a></div>
+<div class="ckrow" data-pg="17"><span class="ck">&#10003;</span><span class="ckt">N.A.I.F.A | Properly Identifying Yourself to Consumers</span><a class="pg" onclick="event.stopPropagation();hit(17)">p.17</a></div>
+<div class="ckrow" data-pg="17"><span class="ck">&#10003;</span><span class="ckt">NAIFA | NATIONAL Association of Insurance &amp; Financial Advisers</span><a class="pg" onclick="event.stopPropagation();hit(17)">p.17</a></div>
+<div class="ckrow" data-pg="17"><span class="ck">&#10003;</span><span class="ckt">[ Identify ] NATIONAL Organizations ARE NOT Regulatory Entities...</span><a class="pg" onclick="event.stopPropagation();hit(17)">p.17</a></div>
+<div class="ckrow" data-pg="18"><span class="ck">&#10003;</span><span class="ckt">WHO issues Insurance Licenses in Florida?</span><a class="pg" onclick="event.stopPropagation();hit(18)">p.18</a></div>
+<div class="ckrow big" data-pg="20"><span class="ck">&#10003;</span><span class="ckt">iQ.1 | WHOOP – WHOOP is the Sound of the POLICE</span><a class="pg" onclick="event.stopPropagation();hit(20)">p.20</a></div></div>
+  </div>
+  <div class="panel full">
+    <div class="ph"><h2>iLAW | Index &amp; Locator</h2><span class="cnt">34 Keywords</span></div>
+    <div style="padding:0 18px"><input class="find" placeholder="Find a keyword…" oninput="filt(this.value)"></div>
+    <div class="scroll"><div class="lgrid" id="loc"><div class="lrow"><span>( VS ) Independent BROKER</span><span class="lp"><a onclick="hit(10)">10</a></span></div><div class="lrow"><span>Administrative Penalties 30-DAYS</span><span class="lp"><a onclick="hit(14)">14</a></span></div><div class="lrow"><span>AGENT | EMPLOYEE</span><span class="lp"><a onclick="hit(10)">10</a></span></div><div class="lrow"><span>AGENT | One Insurer Appointment – [ Contrast ] Broker</span><span class="lp"><a onclick="hit(11)">11</a></span></div><div class="lrow"><span>ANY Change to Personal Contact Info</span><span class="lp"><a onclick="hit(14)">14</a></span></div><div class="lrow"><span>ARREST = 30-DAYS</span><span class="lp"><a onclick="hit(14)">14</a></span></div><div class="lrow"><span>Aviation Questionnaire</span><span class="lp"><a onclick="hit(15)">15</a></span></div><div class="lrow"><span>AVIATION Questionnaire</span><span class="lp"><a onclick="hit(15)">15</a></span></div><div class="lrow"><span>CFO Press Release: DFS ( VS ) Karen S. Baker – FELONY DUI</span><span class="lp"><a onclick="hit(9)">9</a></span></div><div class="lrow"><span>CRIMES, FINES &amp; Felonies – ( Part ONE )</span><span class="lp"><a onclick="hit(14)">14</a></span></div><div class="lrow"><span>DFS Communications Timeframes</span><span class="lp"><a onclick="hit(14)">14</a></span></div><div class="lrow"><span>HAZARD</span><span class="lp"><a onclick="hit(15)">15</a></span></div><div class="lrow"><span>HELLO NEIGHBOR!</span><span class="lp"><a onclick="hit(17)">17</a></span></div><div class="lrow"><span>iFLASH4u Keywords &amp; Concepts</span><span class="lp"><a onclick="hit(15)">15</a></span></div><div class="lrow"><span>INSURANCE Policy Application</span><span class="lp"><a onclick="hit(12)">12</a></span></div><div class="lrow"><span>LOOK OUT! – (U1)</span><span class="lp"><a onclick="hit(8)">8</a></span></div><div class="lrow"><span>MORAL &amp; MORALE Hazards. [ Define ] Hazard</span><span class="lp"><a onclick="hit(15)">15</a></span></div><div class="lrow"><span>MORAL ( VS ) MoralE</span><span class="lp"><a onclick="hit(10)">10</a></span></div><div class="lrow"><span>N.A.I.F.A | Properly Identifying Yourself to Consumers</span><span class="lp"><a onclick="hit(17)">17</a></span></div><div class="lrow"><span>NAIFA | NATIONAL Association of Insurance &amp; Financial Advisers</span><span class="lp"><a onclick="hit(17)">17</a></span></div><div class="lrow"><span>NATIONAL Organizations ARE NOT Regulatory Entities</span><span class="lp"><a onclick="hit(17)">17</a></span></div><div class="lrow"><span>Only PEOPLE can commit a crime</span><span class="lp"><a onclick="hit(14)">14</a></span></div><div class="lrow"><span>PART-III of an Insurance Policy Application is TESTED!</span><span class="lp"><a onclick="hit(12)">12</a></span></div><div class="lrow"><span>Physical Hazards</span><span class="lp"><a onclick="hit(15)">15</a></span></div><div class="lrow"><span>PRESUMPTIVE Disabilities</span><span class="lp"><a onclick="hit(15)">15</a></span></div><div class="lrow"><span>Professional Responsibility – Misappropriation of funds</span><span class="lp"><a onclick="hit(9)">9</a></span></div><div class="lrow"><span>WHAT is a FIDUCIARY?</span><span class="lp"><a onclick="hit(11)">11</a></span></div><div class="lrow"><span>What is a Peril?</span><span class="lp"><a onclick="hit(16)">16</a></span></div><div class="lrow"><span>WHAT is the role of a Professional Liaison</span><span class="lp"><a onclick="hit(11)">11</a></span></div><div class="lrow"><span>WHAT type of information does a licensee convey?</span><span class="lp"><a onclick="hit(12)">12</a></span></div><div class="lrow"><span>WHO issues Insurance Licenses in Florida?</span><span class="lp"><a onclick="hit(18)">18</a></span></div><div class="lrow"><span>Who Regulates Insurers in Florida?</span><span class="lp"><a onclick="hit(11)">11</a></span></div><div class="lrow"><span>WHOOP – WHOOP is the Sound of the POLICE</span><span class="lp"><a onclick="hit(20)">20</a></span></div><div class="lrow"><span>“ Karen got CAUGHT coming in HOT! ” – VIOLATION</span><span class="lp"><a onclick="hit(9)">9</a></span></div></div></div>
+  </div>
+</div>
+<script>
+var P=["008", "009", "010", "011", "012", "013", "014", "015", "016", "017", "018", "019", "020", "021"], cur=0, BASE='https://www.theinsuranceschool.com/pages/page-';
+function show(){var p=P[cur];document.getElementById('pg').src=BASE+p+'.png';document.getElementById('pin').value=p.replace(/^0+/,'').toUpperCase();document.getElementById('ptot').textContent='· Unit pages '+P[0].replace(/^0+/,'')+'–'+P[P.length-1].replace(/^0+/,'');}
+function step(n){cur=Math.max(0,Math.min(P.length-1,cur+n));show();}
+function go(v){var s=String(v).toLowerCase().replace(/^0+/,'');var i=P.findIndex(function(p){return p.replace(/^0+/,'')===s;});if(i>=0){cur=i;show();}}
+document.addEventListener('keydown',function(e){if(e.target.tagName==='INPUT')return;if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1);});
+function mark(n){document.querySelectorAll('.qa.hit').forEach(function(e){e.classList.remove('hit');});var e=document.getElementById('q'+n);if(!e)return;e.classList.add('hit');var s=document.getElementById('sg');s.scrollTop=e.offsetTop-s.offsetTop-10;}
+function openQ(n){var e=document.getElementById('q'+n);e.classList.toggle('open');go(e.dataset.pg);mark(n);history.replaceState(null,'','#q'+n);}
+function hit(p){go(p);var e=document.querySelector('.qa[data-pg="'+p+'"]');if(e){mark(e.id.slice(1));}else{document.querySelectorAll('.qa.hit').forEach(function(x){x.classList.remove('hit');});}}
+document.querySelectorAll('.ckrow').forEach(function(r){r.onclick=function(){r.classList.toggle('done');document.getElementById('ckd').textContent=document.querySelectorAll('.ckrow.done').length;hit(parseInt(r.dataset.pg));};});
+function filt(t){t=t.toLowerCase();document.querySelectorAll('.lrow').forEach(function(r){r.style.display=r.textContent.toLowerCase().indexOf(t)>=0?'':'none';});}
+show();
+if(/^#q\d+$/.test(location.hash)){var n=location.hash.slice(2);var e=document.getElementById('q'+n);if(e){e.classList.add('open');go(e.dataset.pg);mark(n);}}
+</script>
+</body></html>
