@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iLaw Unit FIVE | DFS Division of Unclaimed Property – My Florida CFO .com</title>
+<meta name="description" content="iLaw Book ONE, Unit FIVE: DFS Division of Unclaimed Property – My Florida CFO .com. Survival Guide questions, checklist and locator. The Insurance School.">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,800;1,600&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1B2A44;--dfs:#182853;--cream:#FAF6EC;--card:#FDFBF3;--gold:#C99B2D;--pill:#F0C24B;--orange:#DD7E2F;--green:#3E9E4F;--gb:#43B04A;--purple:#6B3FA0;--parch:#EFE7D2}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--cream);color:var(--navy);font-family:'Lato',sans-serif;font-size:15px;line-height:1.5}
+header{background:var(--navy);color:#fff;padding:14px 22px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:20}
+header h1{font-family:'Bitter';font-size:20px;font-weight:800}
+header h1 b{color:var(--gold)}
+.badge{background:#3E9E4F;color:#fff;font-weight:900;font-size:11px;letter-spacing:1px;border-radius:999px;padding:3px 10px;margin-left:8px;vertical-align:middle}
+header select{font-family:'Bitter';font-size:14px;padding:6px 8px;border-radius:6px;border:2px solid var(--gold);max-width:340px}
+.wrap{max-width:1400px;margin:0 auto;padding:18px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:22px}
+.viewer{position:sticky;top:74px;align-self:start}
+.pgbox{background:var(--parch);border-radius:14px;padding:12px;box-shadow:0 6px 20px rgba(24,40,83,.12)}
+.pgbox img{width:100%;display:block;border-radius:8px;background:#fff;max-height:calc(100vh - 190px);object-fit:contain}
+.bar{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:10px}
+.bar button{width:40px;height:40px;border-radius:50%;border:none;background:var(--navy);color:#fff;font-size:20px;font-weight:800;cursor:pointer}
+.bar button:hover{background:var(--gold);color:var(--navy)}
+.bar input{width:70px;text-align:center;font-family:'Bitter';font-weight:800;font-size:16px;padding:6px;border-radius:8px;border:2px solid var(--green)}
+.bar .of{font-family:'Bitter';font-weight:800}
+.panel{background:var(--card);border-radius:14px;box-shadow:0 4px 14px rgba(24,40,83,.1);margin-bottom:22px}
+.ph{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:3px solid var(--gold)}
+.ph h2{font-family:'Bitter';font-size:19px}
+.ph .cnt{background:var(--pill);border-radius:999px;padding:4px 14px;font-family:'Bitter';font-weight:800;font-size:14px}
+.ph button{font-family:'Bitter';font-weight:800;font-size:12px;border:2px solid var(--green);background:#fff;color:var(--green);border-radius:999px;padding:5px 12px;cursor:pointer}
+.scroll{max-height:70vh;overflow-y:auto;padding:10px 18px 18px}
+.sghead{font-family:'Bitter';font-weight:800;color:#fff;background:var(--dfs);border-radius:8px;padding:7px 12px;margin:16px 0 8px}
+.qa{margin:8px 0}
+.qbox{display:flex;gap:10px;align-items:flex-start;border:2px solid var(--orange);border-right:7px solid var(--orange);border-radius:12px;padding:9px 12px;cursor:pointer;font-family:'Bitter';font-weight:600}
+.qn{flex:0 0 auto;min-width:30px;height:30px;border-radius:50%;background:var(--orange);color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+.ans{display:none;margin:6px 0 0 40px;background:var(--parch);border-left:5px solid var(--green);border-radius:10px;padding:10px 14px;font-size:14px}
+.ans p+p{margin-top:6px}
+.qa.open .ans,body.showall .ans{display:block}
+.qa.open .qn,body.showall .qn{background:var(--gb)}
+.code{color:var(--purple);font-weight:700;font-size:12.5px}
+.tag{color:var(--orange);font-weight:800}
+.ckunit{font-family:'Bitter';font-weight:800;margin:14px 0 4px;color:var(--dfs)}
+.ckrow{display:flex;gap:10px;align-items:center;padding:6px 4px;border-bottom:1px solid #eadfc4;cursor:pointer;font-size:13.5px}
+.ckrow.big{font-weight:800;font-family:'Bitter'}
+.ck{flex:0 0 auto;width:20px;height:20px;border-radius:50%;border:2px solid #b9ab86;color:transparent;font-size:12px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.ckrow.done .ck{background:var(--gb);border-color:var(--gb);color:#fff}
+.ckrow.done .ckt{text-decoration:line-through;color:#9a8f73}
+.ckt{flex:1}
+a.pg,.lp a{flex:0 0 auto;background:var(--pill);color:var(--navy);font-weight:800;font-size:11.5px;border-radius:6px;padding:2px 7px;cursor:pointer;text-decoration:none}
+a.pg:hover,.lp a:hover{background:var(--gb);color:#fff}
+.lgrid{display:grid;grid-template-columns:1fr 1fr;column-gap:24px}
+.lrow{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px solid #eadfc4;font-size:13.5px}
+.lp{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}
+.find{width:100%;padding:8px 12px;border:2px solid #d8cba7;border-radius:8px;font-size:14px;margin:10px 0}
+.full{grid-column:1/-1}
+.unav{max-width:1400px;margin:14px auto 0;padding:0 18px;display:flex;justify-content:space-between;gap:10px;font-family:'Bitter';font-weight:800}
+.unav a{background:var(--navy);color:#fff;text-decoration:none;border-radius:999px;padding:7px 16px;font-size:14px}
+.unav a:hover{background:var(--gold);color:var(--navy)}
+.unav span{flex:1}
+.empty{padding:14px 4px;color:#7a6a48;font-style:italic}
+.qbox .qt{flex:1}
+.qbox a.pg{align-self:center}
+.vflag{flex:0 0 auto;align-self:center;background:var(--purple);color:#fff;font-family:'Lato';font-weight:900;font-size:10px;letter-spacing:1px;border-radius:999px;padding:2px 8px}
+.qa.hit .qbox{background:#FFF3C4;box-shadow:0 0 0 3px var(--pill)}
+.nohit{font-size:12.5px;color:#9a8f73;padding:4px 0 0}
+@media(max-width:900px){.wrap{grid-template-columns:1fr}.viewer{position:static}.lgrid{grid-template-columns:1fr}}
+@media print{header,.bar,.viewer{display:none}.scroll{max-height:none}.ans{display:block}}
+</style></head>
+<body>
+<header>
+  <h1><a href="index.html" style="color:inherit;text-decoration:none"><b>iLAW</b> | Book ONE</a> — Unit FIVE | DFS Division of Unclaimed Property – My Florida CFO .com <span class="badge">SURVIVAL GUIDE</span></h1>
+  <select id="unit" onchange="location.href=this.value"><option value="index.html">All 15 Units</option><option value="unit-01.html">Unit ONE | WHOOP – WHOOP is the sound of the POLICE!</option><option value="unit-02.html">Unit TWO | Meet Florida’s NEW CFO - Blaise Ingoglia</option><option value="unit-03.html">Unit THREE | History of US Insurance Regulations</option><option value="unit-04.html">Unit FOUR | Division of Consumer Services</option><option value="unit-05.html" selected>Unit FIVE | DFS Division of Unclaimed Property – My Florida CFO .com</option><option value="unit-06.html">Unit SIX | DFS Division of Criminal Investigations</option><option value="unit-07.html">Unit SEVEN | CFO / DFS Authority – PRESS RELEASE</option><option value="unit-08.html">Unit EIGHT | Division of Insurance Agent &amp; Agency Services</option><option value="unit-09.html">Unit NINE | More Crimes Against Logic - 08.20.2026</option><option value="unit-10.html">Unit TEN | Maintaining an Insurance License</option><option value="unit-11.html">Unit ELEVEN | Non-Resident Licensing, Recordkeeping &amp; Contract Vocabulary</option><option value="unit-12.html">Unit TWELVE | Florida’s Office of Insurance Regulations - OIR</option><option value="unit-13.html">Unit THIRTEEN | Ensuring INSURER Financial Stability – ( OIR )</option><option value="unit-14.html">Unit FOURTEEN | iFlash4u Vocabulary – ( Review )</option><option value="unit-15.html">Unit FIFTEEN | Fines, Crimes &amp; FELONIES.</option></select>
+</header>
+<div class="unav"><a href="unit-04.html">&larr; Unit FOUR</a><span></span><a href="unit-06.html">Unit SIX &rarr;</a></div>
+<div class="wrap">
+  <div class="viewer">
+    <div class="pgbox"><img id="pg" alt="page"></div>
+    <div class="bar">
+      <button onclick="step(-1)" aria-label="Previous">&#8249;</button>
+      <span class="of">PAGE</span><input id="pin" onchange="go(this.value)"><span class="of" id="ptot"></span>
+      <button onclick="step(1)" aria-label="Next">&#8250;</button>
+    </div>
+  </div>
+  <div>
+    <div class="panel">
+      <div class="ph"><h2>Survival Guide | KEY</h2><span class="cnt">7 Questions · 3 Vocab</span><button onclick="document.body.classList.toggle('showall')">Show / hide all answers</button></div>
+      <div class="scroll" id="sg"><div class="sghead">Division of Criminal INVESTIGATIONS</div>
+<div class="qa" id="q131" data-pg="60"><div class="qbox" onclick="openQ(131)"><span class="qn">131</span><span class="qt">HOW does Florida’s Division of Unclaimed Property protect insurance policyowners &amp; beneficiaries in Florida?</span><a class="pg" href="#q131" onclick="event.stopPropagation();go(60);mark(131)">p.60</a></div><div class="ans"><p>The DFS Division of Un-Claimed Property archives funds payable to Floridians.</p><p>Simply log into My Florida CFO .com and type your information into the Unclaimed Property search. If insurance benefits (OR) other deposits are payable to you it will appear here.</p><p><span class="code">_(*[(2.1.1.5) p. 17])</span></p></div></div>
+<div class="sghead">#iFlash4U | Keywords &amp; Concepts</div>
+<div class="qa" id="q139" data-pg="63"><div class="qbox" onclick="openQ(139)"><span class="qn">139</span><span class="qt">What type of insurer is incorporated to earn a profit for its investors?</span><span class="vflag" title="Interpretation of delivered content — vocabulary">VOCAB</span><a class="pg" href="#q139" onclick="event.stopPropagation();go(63);mark(139)">p.63</a></div><div class="ans"><p>Stock Insurers</p></div></div>
+<div class="qa" id="q140" data-pg="63"><div class="qbox" onclick="openQ(140)"><span class="qn">140</span><span class="qt">What type of insurer sells PARTICIPATING Policies?</span><a class="pg" href="#q140" onclick="event.stopPropagation();go(63);mark(140)">p.63</a></div><div class="ans"><p>MUTUAL Insurers</p><p>POLICYOWNERS Participate in company profit sharing.Insurer profits are paid in the form of a REFUND of premiums called a DIVIDEND.</p></div></div>
+<div class="qa" id="q141" data-pg="63"><div class="qbox" onclick="openQ(141)"><span class="qn">141</span><span class="qt">What type of insurer sells NON-Participating Policies?</span><span class="vflag" title="Interpretation of delivered content — vocabulary">VOCAB</span><a class="pg" href="#q141" onclick="event.stopPropagation();go(63);mark(141)">p.63</a></div><div class="ans"><p>STOCK Insurers are organized to earn a profit for their investors.</p></div></div>
+<div class="qa" id="q142" data-pg="63"><div class="qbox" onclick="openQ(142)"><span class="qn">142</span><span class="qt">What is a DIVIDEND?</span><a class="pg" href="#q142" onclick="event.stopPropagation();go(63);mark(142)">p.63</a></div><div class="ans"><p>A dividend is how MUTUAL Insurers share profits Participating policies sold by Mutual Insurers.</p></div></div>
+<div class="qa" id="q143" data-pg="63"><div class="qbox" onclick="openQ(143)"><span class="qn">143</span><span class="qt">What type of insurer pays its policyowners a DIVIDEND?</span><a class="pg" href="#q143" onclick="event.stopPropagation();go(63);mark(143)">p.63</a></div><div class="ans"><p>Mutual Insurers who sell Participating Policies</p></div></div>
+<div class="qa" id="q144" data-pg="63"><div class="qbox" onclick="openQ(144)"><span class="qn">144</span><span class="qt">Why would an insurer undergo the MUTUALIZATION process?</span><span class="vflag" title="Interpretation of delivered content — vocabulary">VOCAB</span><a class="pg" href="#q144" onclick="event.stopPropagation();go(63);mark(144)">p.63</a></div><div class="ans"><p>Mutualization occurs when a STOCK Insurer incorporated to earn a profit for its INVESTORS, wants to transform into a MUTUAL Insurer designed to make a profit for its POLICYOWNERS.</p></div></div></div>
+    </div>
+  </div>
+  <div class="panel full">
+    <div class="ph"><h2><span style="color:var(--gold)">i</span>FLASH4u | Keyword &amp; Concept Checklist</h2><span class="cnt"><span id="ckd">0</span> / 10 Identified</span></div>
+    <div class="scroll" id="ck"><div class="ckunit">Unit FIVE | DFS Division of Unclaimed Property – My Florida CFO .com</div>
+<div class="ckrow big" data-pg="60"><span class="ck">&#10003;</span><span class="ckt">5.1 | What is UNCLAIMED Property?</span><a class="pg" onclick="event.stopPropagation();hit(60)">p.60</a></div>
+<div class="ckrow" data-pg="60"><span class="ck">&#10003;</span><span class="ckt">HOW can INSURANCE become UNCLAIMED Property?</span><a class="pg" onclick="event.stopPropagation();hit(60)">p.60</a></div>
+<div class="ckrow" data-pg="60"><span class="ck">&#10003;</span><span class="ckt">WHY does UNCLAIMED PROPERTY fall under CFO’s jurisdiction?</span><a class="pg" onclick="event.stopPropagation();hit(60)">p.60</a></div>
+<div class="ckrow big" data-pg="61"><span class="ck">&#10003;</span><span class="ckt">5.2 | Purpose of Florida’s Department of Financial Services?</span><a class="pg" onclick="event.stopPropagation();hit(61)">p.61</a></div>
+<div class="ckrow big" data-pg="62"><span class="ck">&#10003;</span><span class="ckt">5.3 | WHY was Florida’s Unclaimed Property Division created?</span><a class="pg" onclick="event.stopPropagation();hit(62)">p.62</a></div>
+<div class="ckrow big" data-pg="63"><span class="ck">&#10003;</span><span class="ckt">5.4 | $57 Million in Unclaimed Property RETURNED in July - 2026.</span><a class="pg" onclick="event.stopPropagation();hit(63)">p.63</a></div>
+<div class="ckrow" data-pg="63"><span class="ck">&#10003;</span><span class="ckt">Most common types of unclaimed property</span><a class="pg" onclick="event.stopPropagation();hit(63)">p.63</a></div>
+<div class="ckrow" data-pg="64"><span class="ck">&#10003;</span><span class="ckt">### About Florida’s Chief Financial Officer</span><a class="pg" onclick="event.stopPropagation();hit(64)">p.64</a></div>
+<div class="ckrow" data-pg="64"><span class="ck">&#10003;</span><span class="ckt">[ Define ] Un-Authorized Entity = 3rd Degree Felony</span><a class="pg" onclick="event.stopPropagation();hit(64)">p.64</a></div>
+<div class="ckrow big" data-pg="65"><span class="ck">&#10003;</span><span class="ckt">iQ.5 | Division of Unclaimed Property</span><a class="pg" onclick="event.stopPropagation();hit(65)">p.65</a></div></div>
+  </div>
+  <div class="panel full">
+    <div class="ph"><h2>iLAW | Index &amp; Locator</h2><span class="cnt">10 Keywords</span></div>
+    <div style="padding:0 18px"><input class="find" placeholder="Find a keyword…" oninput="filt(this.value)"></div>
+    <div class="scroll"><div class="lgrid" id="loc"><div class="lrow"><span>### About Florida’s Chief Financial Officer</span><span class="lp"><a onclick="hit(64)">64</a></span></div><div class="lrow"><span>$57 Million in Unclaimed Property RETURNED in July - 2026</span><span class="lp"><a onclick="hit(63)">63</a></span></div><div class="lrow"><span>Division of Unclaimed Property</span><span class="lp"><a onclick="hit(65)">65</a></span></div><div class="lrow"><span>HOW can INSURANCE become UNCLAIMED Property?</span><span class="lp"><a onclick="hit(60)">60</a></span></div><div class="lrow"><span>Most common types of unclaimed property</span><span class="lp"><a onclick="hit(63)">63</a></span></div><div class="lrow"><span>Purpose of Florida’s Department of Financial Services?</span><span class="lp"><a onclick="hit(61)">61</a></span></div><div class="lrow"><span>Un-Authorized Entity = 3rd Degree Felony</span><span class="lp"><a onclick="hit(64)">64</a></span></div><div class="lrow"><span>What is UNCLAIMED Property?</span><span class="lp"><a onclick="hit(60)">60</a></span></div><div class="lrow"><span>WHY does UNCLAIMED PROPERTY fall under CFO’s jurisdiction?</span><span class="lp"><a onclick="hit(60)">60</a></span></div><div class="lrow"><span>WHY was Florida’s Unclaimed Property Division created?</span><span class="lp"><a onclick="hit(62)">62</a></span></div></div></div>
+  </div>
+</div>
+<script>
+var P=["060", "061", "062", "063", "064", "065", "066"], cur=0, BASE='https://www.theinsuranceschool.com/pages/page-';
+function show(){var p=P[cur];document.getElementById('pg').src=BASE+p+'.png';document.getElementById('pin').value=p.replace(/^0+/,'').toUpperCase();document.getElementById('ptot').textContent='· Unit pages '+P[0].replace(/^0+/,'')+'–'+P[P.length-1].replace(/^0+/,'');}
+function step(n){cur=Math.max(0,Math.min(P.length-1,cur+n));show();}
+function go(v){var s=String(v).toLowerCase().replace(/^0+/,'');var i=P.findIndex(function(p){return p.replace(/^0+/,'')===s;});if(i>=0){cur=i;show();}}
+document.addEventListener('keydown',function(e){if(e.target.tagName==='INPUT')return;if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1);});
+function mark(n){document.querySelectorAll('.qa.hit').forEach(function(e){e.classList.remove('hit');});var e=document.getElementById('q'+n);if(!e)return;e.classList.add('hit');var s=document.getElementById('sg');s.scrollTop=e.offsetTop-s.offsetTop-10;}
+function openQ(n){var e=document.getElementById('q'+n);e.classList.toggle('open');go(e.dataset.pg);mark(n);history.replaceState(null,'','#q'+n);}
+function hit(p){go(p);var e=document.querySelector('.qa[data-pg="'+p+'"]');if(e){mark(e.id.slice(1));}else{document.querySelectorAll('.qa.hit').forEach(function(x){x.classList.remove('hit');});}}
+document.querySelectorAll('.ckrow').forEach(function(r){r.onclick=function(){r.classList.toggle('done');document.getElementById('ckd').textContent=document.querySelectorAll('.ckrow.done').length;hit(parseInt(r.dataset.pg));};});
+function filt(t){t=t.toLowerCase();document.querySelectorAll('.lrow').forEach(function(r){r.style.display=r.textContent.toLowerCase().indexOf(t)>=0?'':'none';});}
+show();
+if(/^#q\d+$/.test(location.hash)){var n=location.hash.slice(2);var e=document.getElementById('q'+n);if(e){e.classList.add('open');go(e.dataset.pg);mark(n);}}
+</script>
+</body></html>

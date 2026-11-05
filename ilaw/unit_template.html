@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>%%TITLE%%</title>
+<meta name="description" content="%%DESC%%">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,800;1,600&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1B2A44;--dfs:#182853;--cream:#FAF6EC;--card:#FDFBF3;--gold:#C99B2D;--pill:#F0C24B;--orange:#DD7E2F;--green:#3E9E4F;--gb:#43B04A;--purple:#6B3FA0;--parch:#EFE7D2}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--cream);color:var(--navy);font-family:'Lato',sans-serif;font-size:15px;line-height:1.5}
+header{background:var(--navy);color:#fff;padding:14px 22px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:20}
+header h1{font-family:'Bitter';font-size:20px;font-weight:800}
+header h1 b{color:var(--gold)}
+.badge{background:#3E9E4F;color:#fff;font-weight:900;font-size:11px;letter-spacing:1px;border-radius:999px;padding:3px 10px;margin-left:8px;vertical-align:middle}
+header select{font-family:'Bitter';font-size:14px;padding:6px 8px;border-radius:6px;border:2px solid var(--gold);max-width:340px}
+.wrap{max-width:1400px;margin:0 auto;padding:18px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:22px}
+.viewer{position:sticky;top:74px;align-self:start}
+.pgbox{background:var(--parch);border-radius:14px;padding:12px;box-shadow:0 6px 20px rgba(24,40,83,.12)}
+.pgbox img{width:100%;display:block;border-radius:8px;background:#fff;max-height:calc(100vh - 190px);object-fit:contain}
+.bar{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:10px}
+.bar button{width:40px;height:40px;border-radius:50%;border:none;background:var(--navy);color:#fff;font-size:20px;font-weight:800;cursor:pointer}
+.bar button:hover{background:var(--gold);color:var(--navy)}
+.bar input{width:70px;text-align:center;font-family:'Bitter';font-weight:800;font-size:16px;padding:6px;border-radius:8px;border:2px solid var(--green)}
+.bar .of{font-family:'Bitter';font-weight:800}
+.panel{background:var(--card);border-radius:14px;box-shadow:0 4px 14px rgba(24,40,83,.1);margin-bottom:22px}
+.ph{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:3px solid var(--gold)}
+.ph h2{font-family:'Bitter';font-size:19px}
+.ph .cnt{background:var(--pill);border-radius:999px;padding:4px 14px;font-family:'Bitter';font-weight:800;font-size:14px}
+.ph button{font-family:'Bitter';font-weight:800;font-size:12px;border:2px solid var(--green);background:#fff;color:var(--green);border-radius:999px;padding:5px 12px;cursor:pointer}
+.scroll{max-height:70vh;overflow-y:auto;padding:10px 18px 18px}
+.sghead{font-family:'Bitter';font-weight:800;color:#fff;background:var(--dfs);border-radius:8px;padding:7px 12px;margin:16px 0 8px}
+.qa{margin:8px 0}
+.qbox{display:flex;gap:10px;align-items:flex-start;border:2px solid var(--orange);border-right:7px solid var(--orange);border-radius:12px;padding:9px 12px;cursor:pointer;font-family:'Bitter';font-weight:600}
+.qn{flex:0 0 auto;min-width:30px;height:30px;border-radius:50%;background:var(--orange);color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+.ans{display:none;margin:6px 0 0 40px;background:var(--parch);border-left:5px solid var(--green);border-radius:10px;padding:10px 14px;font-size:14px}
+.ans p+p{margin-top:6px}
+.qa.open .ans,body.showall .ans{display:block}
+.qa.open .qn,body.showall .qn{background:var(--gb)}
+.code{color:var(--purple);font-weight:700;font-size:12.5px}
+.tag{color:var(--orange);font-weight:800}
+.ckunit{font-family:'Bitter';font-weight:800;margin:14px 0 4px;color:var(--dfs)}
+.ckrow{display:flex;gap:10px;align-items:center;padding:6px 4px;border-bottom:1px solid #eadfc4;cursor:pointer;font-size:13.5px}
+.ckrow.big{font-weight:800;font-family:'Bitter'}
+.ck{flex:0 0 auto;width:20px;height:20px;border-radius:50%;border:2px solid #b9ab86;color:transparent;font-size:12px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.ckrow.done .ck{background:var(--gb);border-color:var(--gb);color:#fff}
+.ckrow.done .ckt{text-decoration:line-through;color:#9a8f73}
+.ckt{flex:1}
+a.pg,.lp a{flex:0 0 auto;background:var(--pill);color:var(--navy);font-weight:800;font-size:11.5px;border-radius:6px;padding:2px 7px;cursor:pointer;text-decoration:none}
+a.pg:hover,.lp a:hover{background:var(--gb);color:#fff}
+.lgrid{display:grid;grid-template-columns:1fr 1fr;column-gap:24px}
+.lrow{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px solid #eadfc4;font-size:13.5px}
+.lp{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}
+.find{width:100%;padding:8px 12px;border:2px solid #d8cba7;border-radius:8px;font-size:14px;margin:10px 0}
+.full{grid-column:1/-1}
+.unav{max-width:1400px;margin:14px auto 0;padding:0 18px;display:flex;justify-content:space-between;gap:10px;font-family:'Bitter';font-weight:800}
+.unav a{background:var(--navy);color:#fff;text-decoration:none;border-radius:999px;padding:7px 16px;font-size:14px}
+.unav a:hover{background:var(--gold);color:var(--navy)}
+.unav span{flex:1}
+.empty{padding:14px 4px;color:#7a6a48;font-style:italic}
+.qbox .qt{flex:1}
+.qbox a.pg{align-self:center}
+.vflag{flex:0 0 auto;align-self:center;background:var(--purple);color:#fff;font-family:'Lato';font-weight:900;font-size:10px;letter-spacing:1px;border-radius:999px;padding:2px 8px}
+.qa.hit .qbox{background:#FFF3C4;box-shadow:0 0 0 3px var(--pill)}
+.nohit{font-size:12.5px;color:#9a8f73;padding:4px 0 0}
+@media(max-width:900px){.wrap{grid-template-columns:1fr}.viewer{position:static}.lgrid{grid-template-columns:1fr}}
+@media print{header,.bar,.viewer{display:none}.scroll{max-height:none}.ans{display:block}}
+</style></head>
+<body>
+<header>
+  <h1><a href="index.html" style="color:inherit;text-decoration:none"><b>iLAW</b> | Book ONE</a> — %%UNAME%% <span class="badge">SURVIVAL GUIDE</span></h1>
+  <select id="unit" onchange="location.href=this.value">%%UNITS%%</select>
+</header>
+<div class="unav">%%UNAV%%</div>
+<div class="wrap">
+  <div class="viewer">
+    <div class="pgbox"><img id="pg" alt="page"></div>
+    <div class="bar">
+      <button onclick="step(-1)" aria-label="Previous">&#8249;</button>
+      <span class="of">PAGE</span><input id="pin" onchange="go(this.value)"><span class="of" id="ptot"></span>
+      <button onclick="step(1)" aria-label="Next">&#8250;</button>
+    </div>
+  </div>
+  <div>
+    <div class="panel">
+      <div class="ph"><h2>Survival Guide | KEY</h2><span class="cnt">%%NQ%% Questions · %%NV%% Vocab</span><button onclick="document.body.classList.toggle('showall')">Show / hide all answers</button></div>
+      <div class="scroll" id="sg">%%SG%%</div>
+    </div>
+  </div>
+  <div class="panel full">
+    <div class="ph"><h2><span style="color:var(--gold)">i</span>FLASH4u | Keyword &amp; Concept Checklist</h2><span class="cnt"><span id="ckd">0</span> / %%NCK%% Identified</span></div>
+    <div class="scroll" id="ck">%%CHECK%%</div>
+  </div>
+  <div class="panel full">
+    <div class="ph"><h2>iLAW | Index &amp; Locator</h2><span class="cnt">%%NLOC%% Keywords</span></div>
+    <div style="padding:0 18px"><input class="find" placeholder="Find a keyword…" oninput="filt(this.value)"></div>
+    <div class="scroll"><div class="lgrid" id="loc">%%LOC%%</div></div>
+  </div>
+</div>
+<script>
+var P=%%PAGES%%, cur=0, BASE='https://www.theinsuranceschool.com/pages/page-';
+function show(){var p=P[cur];document.getElementById('pg').src=BASE+p+'.png';document.getElementById('pin').value=p.replace(/^0+/,'').toUpperCase();document.getElementById('ptot').textContent='· Unit pages '+P[0].replace(/^0+/,'')+'–'+P[P.length-1].replace(/^0+/,'');}
+function step(n){cur=Math.max(0,Math.min(P.length-1,cur+n));show();}
+function go(v){var s=String(v).toLowerCase().replace(/^0+/,'');var i=P.findIndex(function(p){return p.replace(/^0+/,'')===s;});if(i>=0){cur=i;show();}}
+document.addEventListener('keydown',function(e){if(e.target.tagName==='INPUT')return;if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1);});
+function mark(n){document.querySelectorAll('.qa.hit').forEach(function(e){e.classList.remove('hit');});var e=document.getElementById('q'+n);if(!e)return;e.classList.add('hit');var s=document.getElementById('sg');s.scrollTop=e.offsetTop-s.offsetTop-10;}
+function openQ(n){var e=document.getElementById('q'+n);e.classList.toggle('open');go(e.dataset.pg);mark(n);history.replaceState(null,'','#q'+n);}
+function hit(p){go(p);var e=document.querySelector('.qa[data-pg="'+p+'"]');if(e){mark(e.id.slice(1));}else{document.querySelectorAll('.qa.hit').forEach(function(x){x.classList.remove('hit');});}}
+document.querySelectorAll('.ckrow').forEach(function(r){r.onclick=function(){r.classList.toggle('done');document.getElementById('ckd').textContent=document.querySelectorAll('.ckrow.done').length;hit(parseInt(r.dataset.pg));};});
+function filt(t){t=t.toLowerCase();document.querySelectorAll('.lrow').forEach(function(r){r.style.display=r.textContent.toLowerCase().indexOf(t)>=0?'':'none';});}
+show();
+if(/^#q\d+$/.test(location.hash)){var n=location.hash.slice(2);var e=document.getElementById('q'+n);if(e){e.classList.add('open');go(e.dataset.pg);mark(n);}}
+</script>
+</body></html>
