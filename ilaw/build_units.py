@@ -4,7 +4,7 @@ sys.path.insert(0, '/home/claude/School/ilaw')
 from master_toc import UNITS, OFFSET
 from sg_pages import MAP, V
 from build_teacher import qs, fmt   # reuses parsed SG key + formatter
-OUT = '/home/claude/School/ilaw1'; os.makedirs(OUT, exist_ok=True)
+OUT = '/home/claude/School/ilaw1-flat'; os.makedirs(OUT, exist_ok=True)
 tpl = open('/home/claude/School/ilaw/unit_template.html').read()
 NUM = ['ONE','TWO','THREE','FOUR','FIVE','SIX','SEVEN','EIGHT','NINE','TEN','ELEVEN','TWELVE','THIRTEEN','FOURTEEN','FIFTEEN']
 starts = [ss[0][2] - OFFSET for _, ss in UNITS]; starts[0] = 8
@@ -12,10 +12,10 @@ units = []
 for i, (ut, ss) in enumerate(UNITS):
     s = starts[i]; e = starts[i+1] - 1 if i + 1 < len(UNITS) else 144
     title = re.sub(r'^[A-Z]+\s*\|\s*', '', ut).strip()
-    units.append(dict(n=i+1, code=NUM[i], title=title, s=s, e=e, ss=ss, file='unit-%02d.html' % (i+1)))
+    units.append(dict(n=i+1, code=NUM[i], title=title, s=s, e=e, ss=ss, file='iLaw1-Unit-%02d.html' % (i+1)))
 
 def opts(cur):
-    o = ['<option value="index.html">All 15 Units</option>']
+    o = ['<option value="iLaw1-HOME.html">All 15 Units</option>']
     for u in units:
         o.append('<option value="%s"%s>Unit %s | %s</option>' % (u['file'], ' selected' if u is cur else '', u['code'], html.escape(u['title'])))
     return ''.join(o)
@@ -48,8 +48,8 @@ for i, u in enumerate(units):
             loc.setdefault(key.strip(' .–-'), set()).add(p)
     lh = ''.join('<div class="lrow"><span>%s</span><span class="lp">%s</span></div>' % (html.escape(k), ''.join('<a onclick="hit(%d)">%d</a>' % (p, p) for p in sorted(v)))
                  for k, v in sorted(loc.items(), key=lambda x: x[0].lower()))
-    prev = '<a href="%s">&larr; Unit %s</a>' % (units[i-1]['file'], units[i-1]['code']) if i else '<a href="index.html">&larr; All Units</a>'
-    nxt = '<a href="%s">Unit %s &rarr;</a>' % (units[i+1]['file'], units[i+1]['code']) if i + 1 < len(units) else '<a href="index.html">All Units &rarr;</a>'
+    prev = '<a href="%s">&larr; Unit %s</a>' % (units[i-1]['file'], units[i-1]['code']) if i else '<a href="iLaw1-HOME.html">&larr; All Units</a>'
+    nxt = '<a href="%s">Unit %s &rarr;</a>' % (units[i+1]['file'], units[i+1]['code']) if i + 1 < len(units) else '<a href="iLaw1-HOME.html">All Units &rarr;</a>'
     unav = prev + '<span></span>' + nxt
     nv = sum(1 for q in uq if q['n'] in V)
     pg_html = (tpl.replace('%%TITLE%%', 'iLaw Unit %s | %s' % (u['code'], html.escape(u['title'])))
@@ -81,5 +81,5 @@ header p{color:#D9D2BE;margin-top:8px;font-family:Bitter;font-style:italic;font-
 footer{text-align:center;padding:24px;font-size:13px;color:#7c8598}</style></head><body>
 <header><h1><b>iLAW</b> | Book ONE Survival Guide</h1><p>Florida Insurance Laws &amp; Professional Ethics · 15 Units</p></header>
 <div class="grid">''' + cards + '''</div><footer>The Insurance School · Florida's oldest &amp; largest private DFS-authorized insurance education provider</footer></body></html>'''
-open(os.path.join(OUT, 'index.html'), 'w').write(hub)
+open(os.path.join(OUT, 'iLaw1-HOME.html'), 'w').write(hub)
 print('hub ok')

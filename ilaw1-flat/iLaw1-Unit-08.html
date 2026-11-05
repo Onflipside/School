@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iLaw Unit EIGHT | Division of Insurance Agent &amp; Agency Services</title>
+<meta name="description" content="iLaw Book ONE, Unit EIGHT: Division of Insurance Agent &amp; Agency Services. Survival Guide questions, checklist and locator. The Insurance School.">
+<link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,400;0,600;0,800;1,600&family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#1B2A44;--dfs:#182853;--cream:#FAF6EC;--card:#FDFBF3;--gold:#C99B2D;--pill:#F0C24B;--orange:#DD7E2F;--green:#3E9E4F;--gb:#43B04A;--purple:#6B3FA0;--parch:#EFE7D2}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--cream);color:var(--navy);font-family:'Lato',sans-serif;font-size:15px;line-height:1.5}
+header{background:var(--navy);color:#fff;padding:14px 22px;display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:20}
+header h1{font-family:'Bitter';font-size:20px;font-weight:800}
+header h1 b{color:var(--gold)}
+.badge{background:#3E9E4F;color:#fff;font-weight:900;font-size:11px;letter-spacing:1px;border-radius:999px;padding:3px 10px;margin-left:8px;vertical-align:middle}
+header select{font-family:'Bitter';font-size:14px;padding:6px 8px;border-radius:6px;border:2px solid var(--gold);max-width:340px}
+.wrap{max-width:1400px;margin:0 auto;padding:18px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:22px}
+.viewer{position:sticky;top:74px;align-self:start}
+.pgbox{background:var(--parch);border-radius:14px;padding:12px;box-shadow:0 6px 20px rgba(24,40,83,.12)}
+.pgbox img{width:100%;display:block;border-radius:8px;background:#fff;max-height:calc(100vh - 190px);object-fit:contain}
+.bar{display:flex;align-items:center;justify-content:center;gap:12px;margin-top:10px}
+.bar button{width:40px;height:40px;border-radius:50%;border:none;background:var(--navy);color:#fff;font-size:20px;font-weight:800;cursor:pointer}
+.bar button:hover{background:var(--gold);color:var(--navy)}
+.bar input{width:70px;text-align:center;font-family:'Bitter';font-weight:800;font-size:16px;padding:6px;border-radius:8px;border:2px solid var(--green)}
+.bar .of{font-family:'Bitter';font-weight:800}
+.panel{background:var(--card);border-radius:14px;box-shadow:0 4px 14px rgba(24,40,83,.1);margin-bottom:22px}
+.ph{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;border-bottom:3px solid var(--gold)}
+.ph h2{font-family:'Bitter';font-size:19px}
+.ph .cnt{background:var(--pill);border-radius:999px;padding:4px 14px;font-family:'Bitter';font-weight:800;font-size:14px}
+.ph button{font-family:'Bitter';font-weight:800;font-size:12px;border:2px solid var(--green);background:#fff;color:var(--green);border-radius:999px;padding:5px 12px;cursor:pointer}
+.scroll{max-height:70vh;overflow-y:auto;padding:10px 18px 18px}
+.sghead{font-family:'Bitter';font-weight:800;color:#fff;background:var(--dfs);border-radius:8px;padding:7px 12px;margin:16px 0 8px}
+.qa{margin:8px 0}
+.qbox{display:flex;gap:10px;align-items:flex-start;border:2px solid var(--orange);border-right:7px solid var(--orange);border-radius:12px;padding:9px 12px;cursor:pointer;font-family:'Bitter';font-weight:600}
+.qn{flex:0 0 auto;min-width:30px;height:30px;border-radius:50%;background:var(--orange);color:#fff;font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center}
+.ans{display:none;margin:6px 0 0 40px;background:var(--parch);border-left:5px solid var(--green);border-radius:10px;padding:10px 14px;font-size:14px}
+.ans p+p{margin-top:6px}
+.qa.open .ans,body.showall .ans{display:block}
+.qa.open .qn,body.showall .qn{background:var(--gb)}
+.code{color:var(--purple);font-weight:700;font-size:12.5px}
+.tag{color:var(--orange);font-weight:800}
+.ckunit{font-family:'Bitter';font-weight:800;margin:14px 0 4px;color:var(--dfs)}
+.ckrow{display:flex;gap:10px;align-items:center;padding:6px 4px;border-bottom:1px solid #eadfc4;cursor:pointer;font-size:13.5px}
+.ckrow.big{font-weight:800;font-family:'Bitter'}
+.ck{flex:0 0 auto;width:20px;height:20px;border-radius:50%;border:2px solid #b9ab86;color:transparent;font-size:12px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.ckrow.done .ck{background:var(--gb);border-color:var(--gb);color:#fff}
+.ckrow.done .ckt{text-decoration:line-through;color:#9a8f73}
+.ckt{flex:1}
+a.pg,.lp a{flex:0 0 auto;background:var(--pill);color:var(--navy);font-weight:800;font-size:11.5px;border-radius:6px;padding:2px 7px;cursor:pointer;text-decoration:none}
+a.pg:hover,.lp a:hover{background:var(--gb);color:#fff}
+.lgrid{display:grid;grid-template-columns:1fr 1fr;column-gap:24px}
+.lrow{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px solid #eadfc4;font-size:13.5px}
+.lp{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}
+.find{width:100%;padding:8px 12px;border:2px solid #d8cba7;border-radius:8px;font-size:14px;margin:10px 0}
+.full{grid-column:1/-1}
+.unav{max-width:1400px;margin:14px auto 0;padding:0 18px;display:flex;justify-content:space-between;gap:10px;font-family:'Bitter';font-weight:800}
+.unav a{background:var(--navy);color:#fff;text-decoration:none;border-radius:999px;padding:7px 16px;font-size:14px}
+.unav a:hover{background:var(--gold);color:var(--navy)}
+.unav span{flex:1}
+.empty{padding:14px 4px;color:#7a6a48;font-style:italic}
+.qbox .qt{flex:1}
+.qbox a.pg{align-self:center}
+.vflag{flex:0 0 auto;align-self:center;background:var(--purple);color:#fff;font-family:'Lato';font-weight:900;font-size:10px;letter-spacing:1px;border-radius:999px;padding:2px 8px}
+.qa.hit .qbox{background:#FFF3C4;box-shadow:0 0 0 3px var(--pill)}
+.nohit{font-size:12.5px;color:#9a8f73;padding:4px 0 0}
+@media(max-width:900px){.wrap{grid-template-columns:1fr}.viewer{position:static}.lgrid{grid-template-columns:1fr}}
+@media print{header,.bar,.viewer{display:none}.scroll{max-height:none}.ans{display:block}}
+</style></head>
+<body>
+<header>
+  <h1><a href="iLaw1-HOME.html" style="color:inherit;text-decoration:none"><b>iLAW</b> | Book ONE</a> — Unit EIGHT | Division of Insurance Agent &amp; Agency Services <span class="badge">SURVIVAL GUIDE</span></h1>
+  <select id="unit" onchange="location.href=this.value"><option value="iLaw1-HOME.html">All 15 Units</option><option value="iLaw1-Unit-01.html">Unit ONE | WHOOP – WHOOP is the sound of the POLICE!</option><option value="iLaw1-Unit-02.html">Unit TWO | Meet Florida’s NEW CFO - Blaise Ingoglia</option><option value="iLaw1-Unit-03.html">Unit THREE | History of US Insurance Regulations</option><option value="iLaw1-Unit-04.html">Unit FOUR | Division of Consumer Services</option><option value="iLaw1-Unit-05.html">Unit FIVE | DFS Division of Unclaimed Property – My Florida CFO .com</option><option value="iLaw1-Unit-06.html">Unit SIX | DFS Division of Criminal Investigations</option><option value="iLaw1-Unit-07.html">Unit SEVEN | CFO / DFS Authority – PRESS RELEASE</option><option value="iLaw1-Unit-08.html" selected>Unit EIGHT | Division of Insurance Agent &amp; Agency Services</option><option value="iLaw1-Unit-09.html">Unit NINE | More Crimes Against Logic - 08.20.2026</option><option value="iLaw1-Unit-10.html">Unit TEN | Maintaining an Insurance License</option><option value="iLaw1-Unit-11.html">Unit ELEVEN | Non-Resident Licensing, Recordkeeping &amp; Contract Vocabulary</option><option value="iLaw1-Unit-12.html">Unit TWELVE | Florida’s Office of Insurance Regulations - OIR</option><option value="iLaw1-Unit-13.html">Unit THIRTEEN | Ensuring INSURER Financial Stability – ( OIR )</option><option value="iLaw1-Unit-14.html">Unit FOURTEEN | iFlash4u Vocabulary – ( Review )</option><option value="iLaw1-Unit-15.html">Unit FIFTEEN | Fines, Crimes &amp; FELONIES.</option></select>
+</header>
+<div class="unav"><a href="iLaw1-Unit-07.html">&larr; Unit SEVEN</a><span></span><a href="iLaw1-Unit-09.html">Unit NINE &rarr;</a></div>
+<div class="wrap">
+  <div class="viewer">
+    <div class="pgbox"><img id="pg" alt="page"></div>
+    <div class="bar">
+      <button onclick="step(-1)" aria-label="Previous">&#8249;</button>
+      <span class="of">PAGE</span><input id="pin" onchange="go(this.value)"><span class="of" id="ptot"></span>
+      <button onclick="step(1)" aria-label="Next">&#8250;</button>
+    </div>
+  </div>
+  <div>
+    <div class="panel">
+      <div class="ph"><h2>Survival Guide | KEY</h2><span class="cnt">19 Questions · 2 Vocab</span><button onclick="document.body.classList.toggle('showall')">Show / hide all answers</button></div>
+      <div class="scroll" id="sg"><div class="sghead">Financial Services Regulation</div>
+<div class="qa" id="q9" data-pg="78"><div class="qbox" onclick="openQ(9)"><span class="qn">9</span><span class="qt">HOW does Florida’s CFO fight Unauthorized Entities?</span><a class="pg" href="#q9" onclick="event.stopPropagation();go(78);mark(9)">p.78</a></div><div class="ans"><p>By implementing minimum licensing requirements and requiring AUTHORIZATION from each insurer a licensee wants to represent.</p><p>DFS Division of Insurance Agent &amp; Agency Services is how Florida’s CFO oversees minimum licensing requirements.</p></div></div>
+<div class="sghead">FSC | Commission Members</div>
+<div class="qa" id="q26" data-pg="78"><div class="qbox" onclick="openQ(26)"><span class="qn">26</span><span class="qt">Which entities ARE NOT overseen by Florida’s Commission or Offices?</span><a class="pg" href="#q26" onclick="event.stopPropagation();go(78);mark(26)">p.78</a></div><div class="ans"><p>Insurance Licensees ( AND ) AGENCIES are regulated by Florida’s DFS | Division of Insurance Agent &amp; Agency Services.</p></div></div>
+<div class="sghead">TRUE ( OR ) FALSE</div>
+<div class="qa" id="q83" data-pg="78"><div class="qbox" onclick="openQ(83)"><span class="qn">83</span><span class="qt">WHAT entities fall under the Department of Financial Services jurisdiction?</span><a class="pg" href="#q83" onclick="event.stopPropagation();go(78);mark(83)">p.78</a></div><div class="ans"><p>PEOPLE – Insurance Agents, Brokers (AND) Insurance Agencies.</p><p>ALL UN-AUTHORIZED Entities including Un-Authorized Insurers are under the DFS Jurisdiction.</p></div></div>
+<div class="qa" id="q84" data-pg="79"><div class="qbox" onclick="openQ(84)"><span class="qn">84</span><span class="qt">WHICH SIX (6) Divisions of Florida’s Department of Financial Services play a role regulating our local insurance industry?</span><a class="pg" href="#q84" onclick="event.stopPropagation();go(79);mark(84)">p.79</a></div><div class="ans"><p>* 1). Consumer Services * 4). Criminal Investigations</p><p>* 2). Agent and Agency Services * 5). Fire Marshal</p><p>* 3). Unclaimed Property * 6). Rehabilitation &amp; Liquidation</p></div></div>
+<div class="qa" id="q94" data-pg="82"><div class="qbox" onclick="openQ(94)"><span class="qn">94</span><span class="qt">When is an insurance agent deemed AUTHORIZED?</span><a class="pg" href="#q94" onclick="event.stopPropagation();go(82);mark(94)">p.82</a></div><div class="ans"><p>When the individual has complied with all Pre-Licensing requirements (AND) have obtained a Valid Insurer Appointment.</p></div></div>
+<div class="qa" id="q95" data-pg="82"><div class="qbox" onclick="openQ(95)"><span class="qn">95</span><span class="qt">HOW much is Florida’s state insurance licensing exam.</span><a class="pg" href="#q95" onclick="event.stopPropagation();go(82);mark(95)">p.82</a></div><div class="ans"><p>$44.00</p></div></div>
+<div class="qa" id="q96" data-pg="82"><div class="qbox" onclick="openQ(96)"><span class="qn">96</span><span class="qt">HOW many state exam attempts are do applicants have in a 12-month period?</span><span class="vflag" title="Interpretation of delivered content — vocabulary">VOCAB</span><a class="pg" href="#q96" onclick="event.stopPropagation();go(82);mark(96)">p.82</a></div><div class="ans"><p>FIVE Times in 12-Months.</p></div></div>
+<div class="qa" id="q97" data-pg="82"><div class="qbox" onclick="openQ(97)"><span class="qn">97</span><span class="qt">HOW much is Florida’s insurance agent licensing fee?</span><a class="pg" href="#q97" onclick="event.stopPropagation();go(82);mark(97)">p.82</a></div><div class="ans"><p>$55.00</p><p>= $50 License Application + $5 Licensee Identification</p></div></div>
+<div class="qa" id="q98" data-pg="82"><div class="qbox" onclick="openQ(98)"><span class="qn">98</span><span class="qt">WHO are insurance LICENSING FEES paid too?</span><a class="pg" href="#q98" onclick="event.stopPropagation();go(82);mark(98)">p.82</a></div><div class="ans"><p>DFS | Department of Financial Services</p><p>= Division of Insurance Agent &amp; Agency Services.</p></div></div>
+<div class="sghead">Division of Criminal INVESTIGATIONS</div>
+<div class="qa" id="q115" data-pg="81"><div class="qbox" onclick="openQ(115)"><span class="qn">115</span><span class="qt">Un-licensed insurance agency employees are permitted to help consumers complete an insurance policy application.</span><a class="pg" href="#q115" onclick="event.stopPropagation();go(81);mark(115)">p.81</a></div><div class="ans"><p>The insurance application process MUST be completed by a properly licensed and authorized licensee.</p></div></div>
+<div class="qa" id="q116" data-pg="81"><div class="qbox" onclick="openQ(116)"><span class="qn">116</span><span class="qt">Un-licensed insurance agency employees are permitted to call prospects and solicit business on an authorized brokers behalf.</span><a class="pg" href="#q116" onclick="event.stopPropagation();go(81);mark(116)">p.81</a></div><div class="ans"><p>ONLY Licensed &amp; Authorized individuals may engage in insurance related activities.</p></div></div>
+<div class="sghead">#iFlash4U | Keywords &amp; Concepts</div>
+<div class="qa" id="q147" data-pg="78"><div class="qbox" onclick="openQ(147)"><span class="qn">147</span><span class="qt">What is the purpose of Insurance Licensing?</span><a class="pg" href="#q147" onclick="event.stopPropagation();go(78);mark(147)">p.78</a></div><div class="ans"><p>CONSUMER PROTECTIONS – Licensing requires insurance professionals to obtain MINIMUM Professional Standards.</p></div></div>
+<div class="qa" id="q150" data-pg="82"><div class="qbox" onclick="openQ(150)"><span class="qn">150</span><span class="qt">HOW much is Florida’s Insurance licensee Application Fee?</span><a class="pg" href="#q150" onclick="event.stopPropagation();go(82);mark(150)">p.82</a></div><div class="ans"><p>$55.00</p><p>= $50 License Application Fee + $5 Broker ID</p></div></div>
+<div class="qa" id="q151" data-pg="82"><div class="qbox" onclick="openQ(151)"><span class="qn">151</span><span class="qt">Insurance licensee application fees are paid to which regulatory entity?</span><a class="pg" href="#q151" onclick="event.stopPropagation();go(82);mark(151)">p.82</a></div><div class="ans"><p>DFS | Division of Insurance Agent &amp; Agency Services.</p></div></div>
+<div class="qa" id="q152" data-pg="82"><div class="qbox" onclick="openQ(152)"><span class="qn">152</span><span class="qt">WHICH state entity helps Floridians find authorized fingerprinting vendors?</span><a class="pg" href="#q152" onclick="event.stopPropagation();go(82);mark(152)">p.82</a></div><div class="ans"><p>DFS | Division of Insurance Agent &amp; Agency Services.</p></div></div>
+<div class="qa" id="q153" data-pg="82"><div class="qbox" onclick="openQ(153)"><span class="qn">153</span><span class="qt">WHAT score do you need to pass Florida’s State Exam?</span><a class="pg" href="#q153" onclick="event.stopPropagation();go(82);mark(153)">p.82</a></div><div class="ans"><p>70% (OR) HIGHER!</p></div></div>
+<div class="qa" id="q154" data-pg="82"><div class="qbox" onclick="openQ(154)"><span class="qn">154</span><span class="qt">HOW many times can you take Florida’s state exam in One (1) Year?</span><span class="vflag" title="Interpretation of delivered content — vocabulary">VOCAB</span><a class="pg" href="#q154" onclick="event.stopPropagation();go(82);mark(154)">p.82</a></div><div class="ans"><p>FIVE Times.</p></div></div>
+<div class="qa" id="q160" data-pg="81"><div class="qbox" onclick="openQ(160)"><span class="qn">160</span><span class="qt">Licensed / Authorized insurance brokers may employ Un-Licensed telemarketers to contact potential prospects.</span><a class="pg" href="#q160" onclick="event.stopPropagation();go(81);mark(160)">p.81</a></div><div class="ans"><p>UNLICENSED Employees CAN NOT engage the public on behalf of an Authorized Licensee.</p></div></div>
+<div class="qa" id="q166" data-pg="85"><div class="qbox" onclick="openQ(166)"><span class="qn">166</span><span class="qt">Every 2-YRS, licensees must pay a $60 appointment fee to Florida’s DFS for each insurer appointment they have.</span><a class="pg" href="#q166" onclick="event.stopPropagation();go(85);mark(166)">p.85</a></div><div class="ans"></div></div></div>
+    </div>
+  </div>
+  <div class="panel full">
+    <div class="ph"><h2><span style="color:var(--gold)">i</span>FLASH4u | Keyword &amp; Concept Checklist</h2><span class="cnt"><span id="ckd">0</span> / 18 Identified</span></div>
+    <div class="scroll" id="ck"><div class="ckunit">Unit EIGHT | Division of Insurance Agent &amp; Agency Services</div>
+<div class="ckrow big" data-pg="78"><span class="ck">&#10003;</span><span class="ckt">8.1 | CFO’s #1 responsibility is to PROTECT Floridian consumers.</span><a class="pg" onclick="event.stopPropagation();hit(78)">p.78</a></div>
+<div class="ckrow" data-pg="78"><span class="ck">&#10003;</span><span class="ckt">[ Identify ] CFO Authority = QUASI + Legislative</span><a class="pg" onclick="event.stopPropagation();hit(78)">p.78</a></div>
+<div class="ckrow big" data-pg="79"><span class="ck">&#10003;</span><span class="ckt">8.2 | Review SIX (6) DFS Divisions relevant to licensing.</span><a class="pg" onclick="event.stopPropagation();hit(79)">p.79</a></div>
+<div class="ckrow big" data-pg="80"><span class="ck">&#10003;</span><span class="ckt">8.3 | ALWAYS Verify Insurance professionals you work with.</span><a class="pg" onclick="event.stopPropagation();hit(80)">p.80</a></div>
+<div class="ckrow big" data-pg="81"><span class="ck">&#10003;</span><span class="ckt">8.4 | WHAT is the definition of transacting insurance?</span><a class="pg" onclick="event.stopPropagation();hit(81)">p.81</a></div>
+<div class="ckrow big" data-pg="82"><span class="ck">&#10003;</span><span class="ckt">8.5 | Florida Insurance Pre-Licensing Requirements</span><a class="pg" onclick="event.stopPropagation();hit(82)">p.82</a></div>
+<div class="ckrow big" data-pg="83"><span class="ck">&#10003;</span><span class="ckt">8.6 | Licensee Responsibilities</span><a class="pg" onclick="event.stopPropagation();hit(83)">p.83</a></div>
+<div class="ckrow" data-pg="83"><span class="ck">&#10003;</span><span class="ckt">DFS.(L)IG1 - [(26.7.1) p.432] Premium Accountability [626.561]</span><a class="pg" onclick="event.stopPropagation();hit(83)">p.83</a></div>
+<div class="ckrow" data-pg="83"><span class="ck">&#10003;</span><span class="ckt">[ Note ] Parts of an Insurance policy Application.</span><a class="pg" onclick="event.stopPropagation();hit(83)">p.83</a></div>
+<div class="ckrow" data-pg="83"><span class="ck">&#10003;</span><span class="ckt">Part (1) ONE</span><a class="pg" onclick="event.stopPropagation();hit(83)">p.83</a></div>
+<div class="ckrow" data-pg="83"><span class="ck">&#10003;</span><span class="ckt">Part (2) TWO</span><a class="pg" onclick="event.stopPropagation();hit(83)">p.83</a></div>
+<div class="ckrow" data-pg="83"><span class="ck">&#10003;</span><span class="ckt">Part (3) THREE</span><a class="pg" onclick="event.stopPropagation();hit(83)">p.83</a></div>
+<div class="ckrow" data-pg="83"><span class="ck">&#10003;</span><span class="ckt">[ Contrast ] Agents ( VS ) Brokers</span><a class="pg" onclick="event.stopPropagation();hit(83)">p.83</a></div>
+<div class="ckrow" data-pg="84"><span class="ck">&#10003;</span><span class="ckt">Florida Resident Licensing</span><a class="pg" onclick="event.stopPropagation();hit(84)">p.84</a></div>
+<div class="ckrow" data-pg="84"><span class="ck">&#10003;</span><span class="ckt">[ Identify ] DFS Insurer Appointments</span><a class="pg" onclick="event.stopPropagation();hit(84)">p.84</a></div>
+<div class="ckrow big" data-pg="85"><span class="ck">&#10003;</span><span class="ckt">8.7 | Insurer Appointment Process</span><a class="pg" onclick="event.stopPropagation();hit(85)">p.85</a></div>
+<div class="ckrow" data-pg="85"><span class="ck">&#10003;</span><span class="ckt">[ Identify ] Appointment Fees</span><a class="pg" onclick="event.stopPropagation();hit(85)">p.85</a></div>
+<div class="ckrow big" data-pg="86"><span class="ck">&#10003;</span><span class="ckt">iQ.8 | Division of Insurance Agent &amp; Agency Services</span><a class="pg" onclick="event.stopPropagation();hit(86)">p.86</a></div></div>
+  </div>
+  <div class="panel full">
+    <div class="ph"><h2>iLAW | Index &amp; Locator</h2><span class="cnt">18 Keywords</span></div>
+    <div style="padding:0 18px"><input class="find" placeholder="Find a keyword…" oninput="filt(this.value)"></div>
+    <div class="scroll"><div class="lgrid" id="loc"><div class="lrow"><span>Agents ( VS ) Brokers</span><span class="lp"><a onclick="hit(83)">83</a></span></div><div class="lrow"><span>ALWAYS Verify Insurance professionals you work with</span><span class="lp"><a onclick="hit(80)">80</a></span></div><div class="lrow"><span>Appointment Fees</span><span class="lp"><a onclick="hit(85)">85</a></span></div><div class="lrow"><span>CFO Authority = QUASI + Legislative</span><span class="lp"><a onclick="hit(78)">78</a></span></div><div class="lrow"><span>CFO’s #1 responsibility is to PROTECT Floridian consumers</span><span class="lp"><a onclick="hit(78)">78</a></span></div><div class="lrow"><span>DFS Insurer Appointments</span><span class="lp"><a onclick="hit(84)">84</a></span></div><div class="lrow"><span>DFS.(L)IG1 - [(26.7.1) p.432] Premium Accountability [626.561]</span><span class="lp"><a onclick="hit(83)">83</a></span></div><div class="lrow"><span>Division of Insurance Agent &amp; Agency Services</span><span class="lp"><a onclick="hit(86)">86</a></span></div><div class="lrow"><span>Florida Insurance Pre-Licensing Requirements</span><span class="lp"><a onclick="hit(82)">82</a></span></div><div class="lrow"><span>Florida Resident Licensing</span><span class="lp"><a onclick="hit(84)">84</a></span></div><div class="lrow"><span>Insurer Appointment Process</span><span class="lp"><a onclick="hit(85)">85</a></span></div><div class="lrow"><span>Licensee Responsibilities</span><span class="lp"><a onclick="hit(83)">83</a></span></div><div class="lrow"><span>Part (1) ONE</span><span class="lp"><a onclick="hit(83)">83</a></span></div><div class="lrow"><span>Part (2) TWO</span><span class="lp"><a onclick="hit(83)">83</a></span></div><div class="lrow"><span>Part (3) THREE</span><span class="lp"><a onclick="hit(83)">83</a></span></div><div class="lrow"><span>Parts of an Insurance policy Application</span><span class="lp"><a onclick="hit(83)">83</a></span></div><div class="lrow"><span>Review SIX (6) DFS Divisions relevant to licensing</span><span class="lp"><a onclick="hit(79)">79</a></span></div><div class="lrow"><span>WHAT is the definition of transacting insurance?</span><span class="lp"><a onclick="hit(81)">81</a></span></div></div></div>
+  </div>
+</div>
+<script>
+var P=["078", "079", "080", "081", "082", "083", "084", "085", "086"], cur=0, BASE='https://www.theinsuranceschool.com/pages/page-';
+function show(){var p=P[cur];document.getElementById('pg').src=BASE+p+'.png';document.getElementById('pin').value=p.replace(/^0+/,'').toUpperCase();document.getElementById('ptot').textContent='· Unit pages '+P[0].replace(/^0+/,'')+'–'+P[P.length-1].replace(/^0+/,'');}
+function step(n){cur=Math.max(0,Math.min(P.length-1,cur+n));show();}
+function go(v){var s=String(v).toLowerCase().replace(/^0+/,'');var i=P.findIndex(function(p){return p.replace(/^0+/,'')===s;});if(i>=0){cur=i;show();}}
+document.addEventListener('keydown',function(e){if(e.target.tagName==='INPUT')return;if(e.key==='ArrowRight')step(1);if(e.key==='ArrowLeft')step(-1);});
+function mark(n){document.querySelectorAll('.qa.hit').forEach(function(e){e.classList.remove('hit');});var e=document.getElementById('q'+n);if(!e)return;e.classList.add('hit');var s=document.getElementById('sg');s.scrollTop=e.offsetTop-s.offsetTop-10;}
+function openQ(n){var e=document.getElementById('q'+n);e.classList.toggle('open');go(e.dataset.pg);mark(n);history.replaceState(null,'','#q'+n);}
+function hit(p){go(p);var e=document.querySelector('.qa[data-pg="'+p+'"]');if(e){mark(e.id.slice(1));}else{document.querySelectorAll('.qa.hit').forEach(function(x){x.classList.remove('hit');});}}
+document.querySelectorAll('.ckrow').forEach(function(r){r.onclick=function(){r.classList.toggle('done');document.getElementById('ckd').textContent=document.querySelectorAll('.ckrow.done').length;hit(parseInt(r.dataset.pg));};});
+function filt(t){t=t.toLowerCase();document.querySelectorAll('.lrow').forEach(function(r){r.style.display=r.textContent.toLowerCase().indexOf(t)>=0?'':'none';});}
+show();
+if(/^#q\d+$/.test(location.hash)){var n=location.hash.slice(2);var e=document.getElementById('q'+n);if(e){e.classList.add('open');go(e.dataset.pg);mark(n);}}
+</script>
+</body></html>
