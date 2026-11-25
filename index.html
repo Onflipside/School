@@ -51,10 +51,10 @@
   .answers .ct-i{display:inline-block;box-sizing:border-box;width:13px;height:13px;margin:0 0 0 7px;padding:0;border:1px solid #fff;border-radius:50%;background:transparent;color:#fff;font-family:Georgia,serif;font-style:italic;font-weight:700;font-size:9px;line-height:11px;text-align:center;vertical-align:1px;cursor:pointer;-webkit-appearance:none;appearance:none;}
   .txt-info{display:none;position:fixed;inset:0;z-index:9999;background:rgba(22,35,59,.55);align-items:center;justify-content:center;padding:20px;}
   .txt-info.open{display:flex;}
-  html{scroll-padding-top:84px;}
-  .slimbar{position:fixed;top:0;left:0;right:0;z-index:900;background:var(--navy);color:#fff;box-shadow:0 2px 10px rgba(0,0,0,.25);transform:translateY(-110%);transition:transform .22s ease;}
+  html{scroll-padding-top:98px;}
+  .slimbar{position:fixed;top:10px;left:0;right:0;z-index:900;padding:0 12px;color:#fff;pointer-events:none;transform:translateY(-140%);transition:transform .22s ease;}
   .slimbar.on{transform:translateY(0);}
-  .slimbar .sb-in{max-width:769px;margin:0 auto;padding:9px 24px;display:flex;align-items:center;justify-content:space-between;gap:14px;}
+  .slimbar .sb-in{box-sizing:border-box;max-width:817px;margin:0 auto;padding:10px 36px;background:var(--navy);border-radius:999px;box-shadow:0 6px 18px rgba(0,0,0,.30);pointer-events:auto;display:flex;align-items:center;justify-content:space-between;gap:14px;}
   .slimbar .sb-name{font-family:'Bitter',Georgia,serif;font-weight:800;font-size:16px;letter-spacing:.2px;line-height:1.1;color:#fff;}
   .slimbar .sb-left{display:flex;flex-direction:column;align-items:flex-start;gap:6px;}
   .slimbar .sb-nav{display:flex;gap:6px;}
@@ -834,8 +834,9 @@
     .hpills .answers .rsvp-ct{display:inline-block;background:#3E9E4F;color:#fff;}
     .hpills .answers{position:relative;}
     .hpills .answers .ct-i{position:absolute;left:100%;top:-4px;margin:0 0 0 3px;width:9px;height:9px;font-size:6.5px;line-height:7px;}
-    html{scroll-padding-top:50px;}
-    .slimbar .sb-in{padding:8px 16px;gap:8px;}
+    html{scroll-padding-top:60px;}
+    .slimbar{top:8px;padding:0 8px;}
+    .slimbar .sb-in{padding:9px 24px 9px 18px;gap:8px;}
     .slimbar .sb-name{font-size:14px;white-space:nowrap;}
     .slimbar .sb-full{display:none;}
     .slimbar .sb-short{display:inline;}
